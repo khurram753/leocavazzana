@@ -30,7 +30,7 @@
                     <div class="card-box noradius noborder bg-default">
                         <i class="fas fa-users float-right text-white"></i>
                         <h6 class="text-white text-uppercase m-b-20">Total Expertise</h6>
-                        <h1 class="m-b-20 text-white counter">{{$projectCount}}</h1>
+                        <h1 class="m-b-20 text-white counter">0</h1>
                         <span class="text-white"></span>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                     <div class="card-box noradius noborder bg-default">
                         <i class="fas fa-users float-right text-white"></i>
                         <h6 class="text-white text-uppercase m-b-20">Total Expertise</h6>
-                        <h1 class="m-b-20 text-white counter">{{$blogCount}}</h1>
+                        <h1 class="m-b-20 text-white counter">0</h1>
                         <span class="text-white"></span>
                     </div>
                 </div>

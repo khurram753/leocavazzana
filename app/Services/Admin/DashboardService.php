@@ -12,8 +12,8 @@ class DashboardService
 {
     public function index()
     {
-        $projectCount = Project::count();
-        $blogCount = News::count();
-        return view('admin.dashboard.dashboard',compact('projectCount','blogCount'));
+//        $projectCount = Project::count();
+//        $blogCount = News::count();
+        return view('admin.dashboard.dashboard');
     }
 }

@@ -22,25 +22,25 @@
 <script>
 
 
-    $(document).ready(function () {
-        getTitle();
-    });
+    {{--$(document).ready(function () {--}}
+    {{--    getTitle();--}}
+    {{--});--}}
 
-    function getTitle() {
-        $.ajax({
-            type: 'GET',
-            url: '{{route("getTitle")}}',
+    {{--function getTitle() {--}}
+    {{--    $.ajax({--}}
+    {{--        type: 'GET',--}}
+    {{--        url: '{{route("getTitle")}}',--}}
 
-            success: function (response, status) {
+    {{--        success: function (response, status) {--}}
 
-                if (response.result == 'success') {
+    {{--            if (response.result == 'success') {--}}
 
-                    $('.site_name').text(response.data.name);
-                } else if (response.result == 'error') {
-                }
-            }
-        });
-    }
+    {{--                $('.site_name').text(response.data.name);--}}
+    {{--            } else if (response.result == 'error') {--}}
+    {{--            }--}}
+    {{--        }--}}
+    {{--    });--}}
+    {{--}--}}
 
     function successMsg(_msg) {
         window.toastr.success(_msg);
