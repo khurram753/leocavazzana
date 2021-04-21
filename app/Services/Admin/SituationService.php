@@ -9,32 +9,54 @@ use App\Helpers\ImageUploadHelper;
 use App\Portfolio;
 use App\Service;
 use App\ServiceImage;
+use App\Situation;
+use App\SituationImage;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use File;
 
-class ServicesService
+class SituationService
 {
     public function index()
     {
-        $data = Service::all();
-        return view('admin.service.listing', compact('data'));
+        $data = Situation::all();
+        return view('admin.situation.listing', compact('data'));
     }
 
     public function create()
     {
-        return view('admin.service.create');
+        return view('admin.situation.create');
     }
 
     public function save($request)
     {
         DB::beginTransaction();
+
         try {
-            $serviceSave = Service::create([
+            $save_image = null;
+            if($request->has('featured_image')) {
+                $image = $request->featured_image;
+                $ext = $image->getClientOriginalExtension();
+                $fileName = $image->getClientOriginalName();
+                $fileNameUpload = time() . "-" . $fileName;
+                $path = public_path('situation_image/images/');
+                if (!file_exists($path)) {
+                    File::makeDirectory($path, 0777, true);
+                }
+
+                $imageSave = ImageUploadHelper::saveImage($image, $fileNameUpload, 'situation_image/images/');
+                $save_image = $imageSave;
+            }
+
+
+            $serviceSave = Situation::create([
                 'title_english'=>$request->title_english,'title_french'=>$request->title_french,
                 'title_russia'=>$request->title_russia,
                 'description_english'=>$request->description_english,'description_french'=>$request->description_french,
                 'description_russia'=>$request->description_russia,
-
+                'tag_line_english'=>$request->tag_line_english,'tag_line_french'=>$request->tag_line_french,
+                'tag_line_russia'=>$request->tag_line_russia,
+                'featured_image' => $save_image,'date'=>Carbon::parse($request->date)->format('Y-m-d')
             ]);
 
 
@@ -52,16 +74,16 @@ class ServicesService
                     $ext = $image->getClientOriginalExtension();
                     $fileName = $image->getClientOriginalName();
                     $fileNameUpload = time() . "-" . $fileName;
-                    $path = public_path('service_image/images/');
+                    $path = public_path('situation_image/images/');
                     if (!file_exists($path)) {
                         File::makeDirectory($path, 0777, true);
                     }
-                    $imageSave[] = ImageUploadHelper::saveImage($image, $fileNameUpload, 'service_image/images/');
+                    $imageSave[] = ImageUploadHelper::saveImage($image, $fileNameUpload, 'situation_image/images/');
                 }
 
                 foreach($imageSave as $image)
                 {
-                    $saveImage = ServiceImage::create(['service_id'=>$serviceSave->id,'image'=>$image]);
+                    $saveImage = SituationImage::create(['situation_id'=>$serviceSave->id,'image'=>$image]);
                 }
 
             }
@@ -78,10 +100,10 @@ class ServicesService
 
     public function edit($id)
     {
-        $data = Service::find($id);
+        $data = Situation::find($id);
 
         if ($data) {
-            return view('admin.service.edit', compact('data'));
+            return view('admin.situation.edit', compact('data'));
         } else {
             return redirect()->back()->with('error', 'Record Not Found');
         }
@@ -89,10 +111,25 @@ class ServicesService
 
     public function update($request)
     {
-        $data = Service::find($request->id);
+        $data = Situation::find($request->id);
         if ($data) {
             DB::beginTransaction();
             try {
+
+                if($request->has('featured_image')) {
+                    $image = $request->featured_image;
+                    $ext = $image->getClientOriginalExtension();
+                    $fileName = $image->getClientOriginalName();
+                    $fileNameUpload = time() . "-" . $fileName;
+                    $path = public_path('situation_image/images/');
+                    if (!file_exists($path)) {
+                        File::makeDirectory($path, 0777, true);
+                    }
+
+                    $imageSave = ImageUploadHelper::saveImage($image, $fileNameUpload, 'situation_image/images/');
+                    $save_image = $imageSave;
+                    $data->featured_image = $save_image;
+                }
 
                 $data->title_english = $request->title_english;
                 $data->title_french = $request->title_french;
@@ -101,6 +138,12 @@ class ServicesService
                 $data->description_english = $request->description_english;
                 $data->description_french = $request->description_french;
                 $data->description_russia = $request->description_russia;
+
+                $data->tag_line_english = $request->tag_line_english;
+                $data->tag_line_french = $request->tag_line_french;
+                $data->tag_line_russia = $request->tag_line_russia;
+
+
 
                 $data->save();
 
@@ -117,7 +160,7 @@ class ServicesService
 
     public function delete($request)
     {
-        $data = Service::find($request->id);
+        $data = Situation::find($request->id);
 
         if ($data) {
             DB::beginTransaction();
@@ -144,19 +187,19 @@ class ServicesService
             $ext = $image->getClientOriginalExtension();
             $fileName = $image->getClientOriginalName();
             $fileNameUpload = time() . "-" . $fileName;
-            $path = public_path('service/images/');
+            $path = public_path('situation_image/images/');
             if (!file_exists($path)) {
                 File::makeDirectory($path, 0777, true);
             }
 
-            $imageSave = ImageUploadHelper::saveImage($image, $fileNameUpload, 'service/images/');
+            $imageSave = ImageUploadHelper::saveImage($image, $fileNameUpload, 'situation_image/images/');
             $save_image = $imageSave;
         }
 
         DB::beginTransaction();
 
         try{
-            $save = ServiceImage::create(['service_id'=>$request->project_id,'image'=>$save_image]);
+            $save = SituationImage::create(['situation_id'=>$request->project_id,'image'=>$save_image]);
         }
         catch (Exception $e)
         {
@@ -172,7 +215,7 @@ class ServicesService
 
     public function deleteGallery($request)
     {
-        $data = ServiceImage::find($request->id);
+        $data = SituationImage::find($request->id);
         if($data)
         {
             DB::beginTransaction();

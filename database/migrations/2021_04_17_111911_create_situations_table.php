@@ -30,6 +30,8 @@ class CreateSituationsTable extends Migration
             $table->text('description_russia')->nullable();
             $table->text('description_french')->nullable();
 
+            $table->string('featured_image')->nullable();
+
             $table->timestamps();
         });
     }

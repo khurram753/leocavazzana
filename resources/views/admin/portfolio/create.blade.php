@@ -1,7 +1,7 @@
 @extends('layout.dashboard-layout.app')
 
 @section('title')
-    Create Customer
+    Create Portfolio
 @endsection
 
 
@@ -12,10 +12,10 @@
             <div class="row">
                 <div class="col-xl-12 bh-mb">
                     <div class="breadcrumb-holder">
-                        <h1 class="main-title float-left">Create Customer</h1>
+                        <h1 class="main-title float-left">Create Portfolio</h1>
                         <ol class="breadcrumb float-right">
                             <li class="breadcrumb-item">Home</li>
-                            <li class="breadcrumb-item active">Create Customer</li>
+                            <li class="breadcrumb-item active">Create Portfolio</li>
                         </ol>
                         <div class="clearfix"></div>
                     </div>

@@ -83,6 +83,65 @@
                 </li>
 
 
+                <li class="submenu">
+                    <a
+
+                        @if(Request()->route()->getName() == 'portfolioProjectListing' ||
+                        Request()->route()->getName() == 'portfolioProjectCreate' )
+                        class="active"
+                        @endif
+                        href="javascript:void(0)">
+                        <i class="fas fa-tachometer-alt"></i> <span> Portfolio Projects </span>
+                        <span class="menu-arrow"></span>
+
+                    </a>
+                    <ul class="list-unstyled">
+                        <li><a href="{{route('portfolioProjectListing')}}">Listing</a></li>
+                        <li><a href="{{route('portfolioProjectCreate')}}">Create Portfolio</a></li>
+                    </ul>
+
+                </li>
+
+
+                <li class="submenu">
+                    <a
+
+                        @if(Request()->route()->getName() == 'serviceListing' ||
+                        Request()->route()->getName() == 'serviceCreate' )
+                        class="active"
+                        @endif
+                        href="javascript:void(0)">
+                        <i class="fas fa-tachometer-alt"></i> <span> Service Management </span>
+                        <span class="menu-arrow"></span>
+
+                    </a>
+                    <ul class="list-unstyled">
+                        <li><a href="{{route('serviceListing')}}">Listing</a></li>
+                        <li><a href="{{route('serviceCreate')}}">Create New Service</a></li>
+                    </ul>
+
+                </li>
+
+                <li class="submenu">
+                    <a
+
+                        @if(Request()->route()->getName() == 'situationListing' ||
+                        Request()->route()->getName() == 'situationCreate' )
+                        class="active"
+                        @endif
+                        href="javascript:void(0)">
+                        <i class="fas fa-tachometer-alt"></i> <span> Situation Management </span>
+                        <span class="menu-arrow"></span>
+
+                    </a>
+                    <ul class="list-unstyled">
+                        <li><a href="{{route('situationListing')}}">Listing</a></li>
+                        <li><a href="{{route('situationCreate')}}">Create New Situation</a></li>
+                    </ul>
+
+                </li>
+
+
                 {{--                <li class="submenu">--}}
                 {{--                    <a--}}
 

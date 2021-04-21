@@ -72,6 +72,33 @@ Route::namespace('Admin')->group(function () {
         Route::post('portfolio-delete','PortfolioController@delete')->name('portfolioDelete');
 //        Route::get('portfolio-change-status','PortfolioController@changeStatus')->name('portfolioStatus');
 
+        Route::get('portfolio-project-listing','PortfolioProjectController@index')->name('portfolioProjectListing');
+        Route::get('portfolio-project-create','PortfolioProjectController@create')->name('portfolioProjectCreate');
+        Route::post('portfolio-project-save','PortfolioProjectController@save')->name('portfolioProjectSave');
+        Route::get('portfolio-project-edit/{id}','PortfolioProjectController@edit')->name('portfolioProjectEdit');
+        Route::post('portfolio-project-update','PortfolioProjectController@update')->name('portfolioProjectUpdate');
+        Route::post('portfolio-project-delete','PortfolioProjectController@delete')->name('portfolioProjectDelete');
+        Route::post('update-portfolio-project-gallery', 'PortfolioProjectController@saveGallery')->name('update-project-gallery');
+        Route::get('delete-portfolio-project-gallery', 'PortfolioProjectController@deleteGallery')->name('delete-project-gallery');
+
+        Route::get('service-listing','ServiceController@index')->name('serviceListing');
+        Route::get('service-create','ServiceController@create')->name('serviceCreate');
+        Route::post('service-save','ServiceController@save')->name('serviceSave');
+        Route::get('service-edit/{id}','ServiceController@edit')->name('serviceEdit');
+        Route::post('service-update','ServiceController@update')->name('serviceUpdate');
+        Route::post('service-delete','ServiceController@delete')->name('serviceDelete');
+        Route::post('update-service-gallery', 'ServiceController@saveGallery')->name('update-service-gallery');
+        Route::get('delete-service-gallery', 'ServiceController@deleteGallery')->name('delete-service-gallery');
+
+        Route::get('situation-listing','SituationController@index')->name('situationListing');
+        Route::get('situation-create','SituationController@create')->name('situationCreate');
+        Route::post('situation-save','SituationController@save')->name('situationSave');
+        Route::get('situation-edit/{id}','SituationController@edit')->name('situationEdit');
+        Route::post('situation-update','SituationController@update')->name('situationUpdate');
+        Route::post('situation-delete','SituationController@delete')->name('situationDelete');
+        Route::post('update-situation-gallery', 'SituationController@saveGallery')->name('update-situation-gallery');
+        Route::get('delete-situation-gallery', 'SituationController@deleteGallery')->name('delete-situation-gallery');
+
 
 
     });

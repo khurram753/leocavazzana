@@ -20,10 +20,17 @@ class CreateProjectsTable extends Migration
             $table->foreign('portfolio_id')->references('id')->on('portfolio')
                 ->onDelete('cascade');
 
-            $table->string('name');
+            $table->string('name_english')->nullable();
+            $table->string('name_russia')->nullable();
+            $table->string('name_english')->nullable();
 
-            $table->string('featured_image');
-            $table->text('description');
+            $table->string('featured_image')->nullable();
+
+            $table->text('description_english')->nullable();
+            $table->text('description_french')->nullable();
+            $table->text('description_russia')->nullable();
+
+
             $table->string('date');
 
             $table->timestamps();
