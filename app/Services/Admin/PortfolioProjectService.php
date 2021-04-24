@@ -126,7 +126,7 @@ class PortfolioProjectService
 
                     $imageSave = ImageUploadHelper::saveImage($image, $fileNameUpload, 'portfolio_project/images/');
                     $save_image = $imageSave;
-                    $data->image = $save_image;
+                    $data->featured_image = $save_image;
                 }
                 $data->name_english = $request->name_english;
                 $data->name_french = $request->name_french;

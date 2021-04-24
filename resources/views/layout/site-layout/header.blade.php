@@ -1,12 +1,11 @@
 <header id="header">
-    <a href="index.html" class="logo"
+    <a href="{{route('home')}}" class="logo"
        data-pjax aria-label="Home - Leo Cavazzana - Freeland Photographer">
         <svg xmlns="http://www.w3.org/2000/svg"
              width="245.11"
              height="133.33"
              viewBox="0 0 245.11 133.33">
-            <g
-                id="Grupo_2042"
+            <g id="Grupo_2042"
                 data-name="Grupo 2042"
                 transform="translate(-1317.446 -88.558)">
                 <g id="Grupo_2009" data-name="Grupo 2009">
@@ -346,7 +345,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="portfolio.html" data-hover="portfolio--marker"
+                    <a href="{{route('portfolio')}}" data-hover="portfolio--marker"
                        class="strong-hover pg-portfolio--menu pg-projeto--menu pg-projetos--menu"
                        data-menu-close>
                         <span data-letter="Portfolio">Portfolio</span>

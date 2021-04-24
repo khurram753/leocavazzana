@@ -6187,7 +6187,7 @@ body {
     width: 3.3rem;
     height: 3.3rem;
     display: inline-block;
-    background: url(../images/projeto/ampliar.svg) no-repeat 50%;
+    background: url(../images/ampliar.svg) no-repeat 50%;
     background-size: contain;
 }
 
@@ -10278,7 +10278,7 @@ li.lista-item.leave
     width: 3.3rem;
     height: 3.3rem;
     display: inline-block;
-    background: url(../images/projeto/ampliar.svg) no-repeat 50%;
+    background: url(../images/ampliar.svg) no-repeat 50%;
     background-size: contain;
     transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
     transition-delay: 0s;

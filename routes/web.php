@@ -20,6 +20,9 @@ use Illuminate\Support\Facades\Route;
 Route::namespace("Site")->group(function () {
     Route::get('/','HomeController@index')->name('home');
     Route::get('about-us','AboutController@index')->name('aboutUs');
+    Route::get('portfolio-page','PortfolioController@index')->name('portfolio');
+    Route::get('projects/{id}','PortfolioController@projectList')->name('portfolioProjectList');
+    Route::get('project-detail/{id}','PortfolioController@projectDetail')->name('portfolioProjectDetail');
 });
 
 Route::namespace('Admin')->group(function () {
