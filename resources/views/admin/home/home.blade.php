@@ -4,6 +4,9 @@
     Home Page Management
 @endsection
 
+@section('style')
+    <link rel="stylesheet" href="{{asset('admin/css/trumbowyg.min.css')}}">
+@endsection
 
 @section('tags')
     <meta name="csrf-token" content="{{ csrf_token() }}"/>
@@ -156,7 +159,7 @@
                         <div class="form-group">
 
                             <label for="exampleInputEmail1">Short Description in English </label>
-                            <textarea class="form-control" name="description_english" placeholder="Enter Short Description in English"
+                            <textarea class="form-control editor" name="description_english" placeholder="Enter Short Description in English"
                                    >{{$data->description_english}}</textarea>
 
                         </div>
@@ -165,7 +168,7 @@
                         <div class="form-group">
 
                             <label for="exampleInputEmail1">Short Description in Russia</label>
-                            <textarea class="form-control" name="description_russia" placeholder="Enter Short Description in Russia"
+                            <textarea class="form-control editor" name="description_russia" placeholder="Enter Short Description in Russia"
                                    >{{$data->description_russia}}</textarea>
 
                         </div>
@@ -174,7 +177,7 @@
                         <div class="form-group">
 
                             <label for="exampleInputEmail1">Short Description in French </label>
-                            <textarea class="form-control" name="description_french" type="email" placeholder="Enter Short Description in French"
+                            <textarea class="form-control editor" name="description_french" type="email" placeholder="Enter Short Description in French"
                                    >{{$data->description_french}}</textarea>
 
                         </div>
@@ -201,10 +204,33 @@
 
 @section('script')
 
+    <script src="{{asset('admin/js/trumbowyg.min.js')}}"></script>
+
     <script>
 
 
         $(document).ready(function () {
+
+            $('.editor').trumbowyg({
+                semantic: {
+                    'div': 'div' // Editor does nothing on div tags now
+                },
+                btns: [
+                    ['viewHTML'],
+                    ['undo', 'redo'], // Only supported in Blink browsers
+                    ['formatting'],
+                    ['strong', 'em', 'del'],
+                    ['superscript', 'subscript'],
+                    ['link'],
+                    // ['insertImage'],
+                    ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
+                    ['unorderedList', 'orderedList'],
+                    ['horizontalRule'],
+                    ['removeformat'],
+                    ['fullscreen']
+                ]
+            });
+
 
 
             $('#createBtn').click(function () {

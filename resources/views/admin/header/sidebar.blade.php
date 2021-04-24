@@ -28,7 +28,7 @@
                         @endif
                         href="{{route('homePage')}}">
                         <i class="fas fa-tachometer-alt"></i> <span> HomePage Management  </span>
-                        <span class="menu-arrow"></span>
+{{--                        <span class="menu-arrow"></span>--}}
                     </a>
                 </li>
 

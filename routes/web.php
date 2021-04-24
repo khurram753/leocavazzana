@@ -18,8 +18,8 @@ use Illuminate\Support\Facades\Route;
 //})->name('home');
 
 Route::namespace("Site")->group(function () {
-
-
+    Route::get('/','HomeController@index')->name('home');
+    Route::get('about-us','AboutController@index')->name('aboutUs');
 });
 
 Route::namespace('Admin')->group(function () {
@@ -61,7 +61,7 @@ Route::namespace('Admin')->group(function () {
         Route::post('customer-delete','CustomerController@delete')->name('customerDelete');
         Route::get('customer-change-status','CustomerController@changeStatus')->name('customerStatus');
 
-        Route::get('about-us','AboutUsController@index')->name('aboutUsManagement');
+        Route::get('about-us-management','AboutUsController@index')->name('aboutUsManagement');
         Route::post('about-us-save','AboutUsController@save')->name('aboutUsSave');
 
         Route::get('portfolio-listing','PortfolioController@index')->name('portfolioListing');

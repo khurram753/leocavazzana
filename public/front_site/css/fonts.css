@@ -1,0 +1,45 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * remora-sans-w3:
+ *   - http://typekit.com/eulas/00000000000000003b9b0ddf
+ *   - http://typekit.com/eulas/00000000000000003b9b0df4
+ * titling-gothic-fb:
+ *   - http://typekit.com/eulas/00000000000000003b9ae8dd
+ *   - http://typekit.com/eulas/00000000000000003b9ae8df
+ *
+ * © 2009-2021 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2020-01-12 00:01:50 UTC"}*/
+
+@import url("https://p.typekit.net/p.css?s=1&k=oks5jda&ht=tk&f=31374.31376.36294.36297&a=11119384&app=typekit&e=css");
+
+@font-face {
+font-family:"titling-gothic-fb";
+src:url("https://use.typekit.net/af/e78554/00000000000000003b9ae8dd/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/e78554/00000000000000003b9ae8dd/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/e78554/00000000000000003b9ae8dd/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:300;
+}
+
+@font-face {
+font-family:"titling-gothic-fb";
+src:url("https://use.typekit.net/af/1100b4/00000000000000003b9ae8df/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/1100b4/00000000000000003b9ae8df/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/1100b4/00000000000000003b9ae8df/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:500;
+}
+
+@font-face {
+font-family:"remora-sans-w3";
+src:url("https://use.typekit.net/af/f09550/00000000000000003b9b0ddf/27/l?subset_id=2&fvd=n6&v=3") format("woff2"),url("https://use.typekit.net/af/f09550/00000000000000003b9b0ddf/27/d?subset_id=2&fvd=n6&v=3") format("woff"),url("https://use.typekit.net/af/f09550/00000000000000003b9b0ddf/27/a?subset_id=2&fvd=n6&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:600;
+}
+
+@font-face {
+font-family:"remora-sans-w3";
+src:url("https://use.typekit.net/af/eb2aeb/00000000000000003b9b0df4/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/eb2aeb/00000000000000003b9b0df4/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/eb2aeb/00000000000000003b9b0df4/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:500;
+}
+
+.tk-titling-gothic-fb { font-family: "titling-gothic-fb",sans-serif; }
+.tk-remora-sans-w3 { font-family: "remora-sans-w3",sans-serif; }

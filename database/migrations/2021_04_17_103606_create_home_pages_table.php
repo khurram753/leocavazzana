@@ -25,9 +25,9 @@ class CreateHomePagesTable extends Migration
 
             $table->string('email')->nullable();
             $table->string('phone_number')->nullable();
-            $table->string('description_english')->nullable();
-            $table->string('description_french')->nullable();
-            $table->string('description_russia')->nullable();
+            $table->text('description_english')->nullable();
+            $table->text('description_french')->nullable();
+            $table->text('description_russia')->nullable();
 
             $table->timestamps();
         });
