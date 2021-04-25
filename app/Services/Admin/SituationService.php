@@ -56,7 +56,8 @@ class SituationService
                 'description_russia'=>$request->description_russia,
                 'tag_line_english'=>$request->tag_line_english,'tag_line_french'=>$request->tag_line_french,
                 'tag_line_russia'=>$request->tag_line_russia,
-                'featured_image' => $save_image,'date'=>Carbon::parse($request->date)->format('Y-m-d')
+                'featured_image' => $save_image,
+                'date'=>Carbon::parse($request->date)->format('Y-m-d')
             ]);
 
 
@@ -143,6 +144,8 @@ class SituationService
                 $data->tag_line_french = $request->tag_line_french;
                 $data->tag_line_russia = $request->tag_line_russia;
 
+                $data->date = Carbon::parse($request->date)->format('Y-m-d');
+
 
 
                 $data->save();
@@ -199,7 +202,8 @@ class SituationService
         DB::beginTransaction();
 
         try{
-            $save = SituationImage::create(['situation_id'=>$request->project_id,'image'=>$save_image]);
+            $save = SituationImage::create(['situation_id'=>$request->project_id,
+                'image'=>$save_image]);
         }
         catch (Exception $e)
         {

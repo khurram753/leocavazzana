@@ -11503,7 +11503,7 @@ h2,
     -webkit-appearance: none;
     width: 1.5rem;
     height: 1.5rem;
-    background: url(../images/loja/icon-close.svg) no-repeat 50%;
+    background: url(../images/icon-close.svg) no-repeat 50%;
     background-size: 1.5rem auto;
 }
 
@@ -12650,7 +12650,7 @@ textarea:-webkit-autofill:hover {
     -webkit-appearance: none;
     width: 1.5rem;
     height: 1.5rem;
-    background: url(../images/historias/icon-close.svg) no-repeat 50%;
+    background: url(../images/icon-close.svg) no-repeat 50%;
     background-size: 1.5rem auto;
 }
 

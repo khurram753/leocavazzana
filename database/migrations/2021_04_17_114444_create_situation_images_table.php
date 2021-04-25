@@ -17,7 +17,7 @@ class CreateSituationImagesTable extends Migration
             $table->id();
 
             $table->unsignedBigInteger('situation_id');
-            $table->foreign('situation_id')->references('id')->on('situation_images')
+            $table->foreign('situation_id')->references('id')->on('situations')
                 ->onDelete('cascade');
             $table->string('image');
 

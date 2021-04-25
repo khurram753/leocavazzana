@@ -23,6 +23,9 @@ Route::namespace("Site")->group(function () {
     Route::get('portfolio-page','PortfolioController@index')->name('portfolio');
     Route::get('projects/{id}','PortfolioController@projectList')->name('portfolioProjectList');
     Route::get('project-detail/{id}','PortfolioController@projectDetail')->name('portfolioProjectDetail');
+    Route::get('service-page','ServiceController@index')->name('service');
+    Route::get('situation','SituationController@index')->name('situation');
+    Route::get('situation-detail/{id}','SituationController@detail')->name('situationDetail');
 });
 
 Route::namespace('Admin')->group(function () {

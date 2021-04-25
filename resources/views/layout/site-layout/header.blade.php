@@ -353,7 +353,7 @@
                 </li>
 
                 <li>
-                    <a href="services.html" data-hover="servicos--marker"
+                    <a href="{{route('service')}}" data-hover="servicos--marker"
                        class="strong-hover pg-servicos--menu"
                        data-menu-close>
                         <span data-letter="Services">Services</span>
@@ -361,14 +361,14 @@
                 </li>
 
                 <li>
-                    <a href="coverage.html" data-hover="viagens--marker"
+                    <a href="" data-hover="viagens--marker"
                        class="strong-hover pg-viagens--menu"
                        data-menu-close>
                         <span data-letter="Coverage">Coverage</span>
                     </a>
                 </li>
                 <li>
-                    <a href="situations.html" data-hover="historias--marker"
+                    <a href="{{route('situation')}}" data-hover="historias--marker"
                        class="strong-hover pg-historias--menu pg-historia--menu"
                        data-menu-close>
                         <span data-letter="Situations">Situations</span>

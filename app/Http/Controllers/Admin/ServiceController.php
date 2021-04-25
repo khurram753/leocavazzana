@@ -46,4 +46,14 @@ class ServiceController extends Controller
     {
         return $servicesService->delete($request);
     }
+
+    public function saveGallery(Request $request,ServicesService $servicesService)
+    {
+        return $servicesService->saveGallery($request);
+    }
+
+    public function deleteGallery(Request $request,ServicesService $servicesService)
+    {
+        return $servicesService->deleteGallery($request);
+    }
 }
