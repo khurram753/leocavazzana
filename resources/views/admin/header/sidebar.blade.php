@@ -142,6 +142,57 @@
                 </li>
 
 
+                <li class="submenu">
+                    <a
+
+                        @if(Request()->route()->getName() == 'colorListing' || Request()->route()->getName() == 'colorCreate')
+                        class="active"
+                        @endif
+                        href="javascript:void(0)">
+                        <i class="fas fa-palette"></i> <span> Product Color </span>
+                        <span class="menu-arrow"></span></a>
+                    <ul class="list-unstyled">
+                        <li><a href="{{route('colorListing')}}">Listing</a></li>
+                        <li><a href="{{route('colorCreate')}}">Create Color</a></li>
+
+
+                    </ul>
+                </li>
+
+                <li class="submenu">
+                    <a
+
+                        @if(Request()->route()->getName() == 'sizeListing' || Request()->route()->getName() == 'sizeCreate')
+                        class="active"
+                        @endif
+                        href="javascript:void(0)">
+                        <i class="fas fa-sort-amount-up"></i> <span>Product Size </span>
+                        <span class="menu-arrow"></span></a>
+                    <ul class="list-unstyled">
+                        <li><a href="{{route('sizeListing')}}">Listing</a></li>
+                        <li><a href="{{route('sizeCreate')}}">Create Size</a></li>
+
+
+                    </ul>
+                </li>
+
+                <li class="submenu">
+                    <a
+
+                        @if(Request()->route()->getName() == 'productListing' || Request()->route()->getName() == 'productCreate')
+                        class="active"
+                        @endif
+                        href="javascript:void(0)">
+                        <i class="fab fa-product-hunt"></i><span> Products </span>
+                        <span class="menu-arrow"></span></a>
+                    <ul class="list-unstyled">
+                        <li><a href="{{route('productListing')}}">Listing</a></li>
+                        <li><a href="{{route('productCreate')}}">Create</a></li>
+
+                    </ul>
+                </li>
+
+
                 {{--                <li class="submenu">--}}
                 {{--                    <a--}}
 

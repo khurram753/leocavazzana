@@ -106,6 +106,33 @@ Route::namespace('Admin')->group(function () {
         Route::get('delete-situation-gallery', 'SituationController@deleteGallery')->name('delete-situation-gallery');
 
 
+        Route::get('color-listing', 'ColorController@index')->name('colorListing');
+        Route::get('create-color', 'ColorController@create')->name('colorCreate');
+        Route::post('save-color', 'ColorController@save')->name('colorSave');
+        Route::get('edit-color/{id}', 'ColorController@edit')->name('colorEdit');
+        Route::post('update-color', 'ColorController@update')->name('colorUpdate');
+        Route::post('color-delete', 'ColorController@delete')->name('colorDelete');
+        Route::get('color-change-status', 'ColorController@changeStatus')->name('colorStatus');
+
+        Route::get('size-listing', 'SizeController@index')->name('sizeListing');
+        Route::get('create-size', 'SizeController@create')->name('sizeCreate');
+        Route::post('save-size', 'SizeController@save')->name('sizeSave');
+        Route::get('edit-size/{id}', 'SizeController@edit')->name('sizeEdit');
+        Route::post('update-size', 'SizeController@update')->name('sizeUpdate');
+        Route::post('size-delete', 'SizeController@delete')->name('sizeDelete');
+        Route::get('size-change-status', 'SizeController@changeStatus')->name('sizeStatus');
+
+        Route::get('product-listing', 'ProductController@index')->name('productListing');
+        Route::get('create-product', 'ProductController@create')->name('productCreate');
+        Route::post('save-product', 'ProductController@save')->name('productSave');
+        Route::get('edit-product/{id}', 'ProductController@edit')->name('productEdit');
+        Route::post('update-product', 'ProductController@update')->name('productUpdate');
+        Route::post('product-delete', 'ProductController@delete')->name('productDelete');
+        Route::get('product-change-status', 'ProductController@changeStatus')->name('productStatus');
+
+
+
+
 
     });
 });
