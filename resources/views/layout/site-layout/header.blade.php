@@ -375,14 +375,14 @@
                     </a>
                 </li>
                 <li>
-                    <a href="shop.html" data-hover="loja--marker"
+                    <a href="{{route('shop')}}" data-hover="loja--marker"
                        class="strong-hover pg-loja--menu"
                        data-menu-close>
                         <span data-letter="Shop">Shop</span>
                     </a>
                 </li>
                 <li>
-                    <a href="contactUs.html" data-hover="contato--marker"
+                    <a href="{{route('contactUs')}}" data-hover="contato--marker"
                        class="strong-hover pg-contato--menu"
                        data-menu-close>
                         <span data-letter="Contact">Contact</span>

@@ -60,51 +60,64 @@
 
                                             @foreach($situations as $key => $situation)
                                                 <div class="swiper-slide active"
-                                                 data-search="A night on the beach l Tulum 18.09.20 Visitamos a reserva natural de Sian Ka&#039;an, e nos sentimos em casa.">
-                                                <a href="{{route('situationDetail',['id'=>$situation->id])}}" data-aos="fadeIn" data-aos-onload>
-                                                    <div class="container-title">
-                                                        <div class="titles">
-                                                            @if(session()->get('language') == 'english')
-                                                                <h2>{{$situation->title_english}}</h2>
-                                                                <h3>
-                                                                    {{$situation->tag_line_english}}
-                                                                </h3>
-                                                            @elseif(session()->get('language') == 'russia')
-                                                                <h2>{{$situation->title_russia}}</h2>
-                                                                <h3>
-                                                                    {{$situation->tag_line_russia}}
-                                                                </h3>
-                                                            @elseif(session()->get('language') == 'french')
-                                                                <h2>{{$situation->title_french}}</h2>
-                                                                <h3>
-                                                                    {{$situation->tag_line_french}}
-                                                                </h3>
-                                                            @else
-                                                                <h2>{{$situation->title_english}}</h2>
-                                                                <h3>
-                                                                    {{$situation->tag_line_english}}
-                                                                </h3>
-                                                            @endif
-                                                        </div>
-                                                        <div class="date">
-                                                            <h2>{{\Carbon\Carbon::parse($situation->date)->format('d.m.Y')}}</h2>
-                                                        </div>
-                                                    </div>
-                                                    <div class="container-img" data-aos="reveal-left" data-aos-onload>
-                                                        <div class="imgs">
-                                                            <img
-                                                                src="{{asset($situation->featured_image)}}"
-                                                                class=""
-                                                                alt="A night on the beach l Tulum"/>
-                                                        </div>
-                                                    </div>
+                                                     @if(session()->get('language') == 'english')
+                                                     data-search="{{$situation->title_english}}"
+                                                     @elseif(session()->get('language') == 'russia')
+                                                     data-search="{{$situation->title_russia}}"
+                                                     @elseif(session()->get('language') == 'french')
+                                                     data-search="{{$situation->title_french}}"
+                                                     @else
+                                                     data-search="{{$situation->title_english}}"
+                                                     @endif
 
-                                                    <div class="container-text" data-aos="fadeIn" data-aos-onload>
-                                                        <p></p>
-                                                        <a href="{{route('situationDetail',['id'=>$situation->id])}}"><h2 class="link-underlined">See more</h2></a>
-                                                    </div>
-                                                </a>
-                                            </div>
+                                                >
+                                                    <a href="{{route('situationDetail',['id'=>$situation->id])}}"
+                                                       data-aos="fadeIn" data-aos-onload>
+                                                        <div class="container-title">
+                                                            <div class="titles">
+                                                                @if(session()->get('language') == 'english')
+                                                                    <h2>{{$situation->title_english}}</h2>
+                                                                    <h3>
+                                                                        {{$situation->tag_line_english}}
+                                                                    </h3>
+                                                                @elseif(session()->get('language') == 'russia')
+                                                                    <h2>{{$situation->title_russia}}</h2>
+                                                                    <h3>
+                                                                        {{$situation->tag_line_russia}}
+                                                                    </h3>
+                                                                @elseif(session()->get('language') == 'french')
+                                                                    <h2>{{$situation->title_french}}</h2>
+                                                                    <h3>
+                                                                        {{$situation->tag_line_french}}
+                                                                    </h3>
+                                                                @else
+                                                                    <h2>{{$situation->title_english}}</h2>
+                                                                    <h3>
+                                                                        {{$situation->tag_line_english}}
+                                                                    </h3>
+                                                                @endif
+                                                            </div>
+                                                            <div class="date">
+                                                                <h2>{{\Carbon\Carbon::parse($situation->date)->format('d.m.Y')}}</h2>
+                                                            </div>
+                                                        </div>
+                                                        <div class="container-img" data-aos="reveal-left"
+                                                             data-aos-onload>
+                                                            <div class="imgs">
+                                                                <img
+                                                                    src="{{asset($situation->featured_image)}}"
+                                                                    class=""
+                                                                    alt="A night on the beach l Tulum"/>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="container-text" data-aos="fadeIn" data-aos-onload>
+                                                            <p></p>
+                                                            <a href="{{route('situationDetail',['id'=>$situation->id])}}">
+                                                                <h2 class="link-underlined">See more</h2></a>
+                                                        </div>
+                                                    </a>
+                                                </div>
                                             @endforeach
 
 

@@ -1,8 +1,11 @@
 
+<link href="{{asset('custom/css/toastr.css')}}" rel="stylesheet">
+
+
 <script src="{{asset('admin/js/jquery.min.js')}}"></script>
 <script src="{{asset('admin/js/jquery.blockUI.js')}}"></script>
 <script src="{{asset('custom/js/toastr.min.js')}}"></script>
-
+<script src="{{asset('custom/js/keypress_functions.js')}}"></script>
 
 
 <script>

@@ -87,7 +87,7 @@ class ProductService
     public function create()
     {
         $sizes = Size::all();
-        $colors = Color::all;
+        $colors = Color::all();
         return view('admin.product.create', with(compact('colors', 'sizes')));
     }
 

@@ -18,9 +18,11 @@
 <body class="pg-loading">
 <div id="loading-animation" class="flex-center"></div>
 
-<div class="cursor-wrapper" id="wrapper-cursor">
-    <div></div>
-</div>
+@if(Request()->route()->getName() != 'shopDetail')
+    <div class="cursor-wrapper" id="wrapper-cursor">
+        <div></div>
+    </div>
+@endif
 
 @yield('content')
 

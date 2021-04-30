@@ -26,6 +26,10 @@ Route::namespace("Site")->group(function () {
     Route::get('service-page','ServiceController@index')->name('service');
     Route::get('situation','SituationController@index')->name('situation');
     Route::get('situation-detail/{id}','SituationController@detail')->name('situationDetail');
+    Route::get('shop','ShopController@index')->name('shop');
+    Route::get('shop-detail/{id}','ShopController@detail')->name('shopDetail');
+    Route::get('contact-us','ContactUsController@index')->name('contactUs');
+    Route::post('send-email','ContactUsController@postContactUs')->name('contactUsEmail');
 });
 
 Route::namespace('Admin')->group(function () {

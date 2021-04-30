@@ -9,7 +9,7 @@
 {{--                </a>--}}
 
 
-        <h1 class="logo"><a href="{{route('adminDashboard')}}" class="site_name">LEO</a></h1>
+        <h1 class="logo"><a href="{{route('home')}}" class="site_name">LEO</a></h1>
 
     </div>
 
