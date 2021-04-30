@@ -222,20 +222,20 @@
         </li>
         <li>
             <a rel="alternate"
-                class="bold">
+                class="bold changeLanguage" data-lang="french">
                 french
             </a>
         </li>
         <li>
             <a rel="alternate"
-                class=" bold">
+                class=" bold changeLanguage"  data-lang="eng">
                 eng
             </a>
         </li>
 
         <li>
             <a rel="alternate"
-               class=" bold">
+               class=" bold changeLanguage"  data-lang="rus">
                 rus
             </a>
         </li>

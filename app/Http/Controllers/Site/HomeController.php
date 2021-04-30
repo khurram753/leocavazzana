@@ -13,4 +13,9 @@ class HomeController extends Controller
     {
         return $homeService->index();
     }
+
+    public function changeLanguage(Request $request,HomeService $homeService)
+    {
+        return $homeService->changeLanguage($request);
+    }
 }

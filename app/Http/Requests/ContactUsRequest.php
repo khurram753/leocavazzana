@@ -31,4 +31,9 @@ class ContactUsRequest extends FormRequest
             'message' => 'required'
         ];
     }
+
+    public function messages()
+    {
+
+    }
 }

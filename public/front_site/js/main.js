@@ -994,19 +994,20 @@
             n.forEach(function (e) {
               e.addEventListener("click", a);
             });
-          })(),
-        document.getElementById("pg-contato"))
-      ) {
-        $(".split").splitLines({
-          tag: '<div class="wrapper-mask-reverse"><span>',
-        }),
-          $.ajaxSetup({
-            headers: {
-              "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
-            },
-          });
-        var P = $("#form-contato"),
-          I = $("#feedback-contato");
+          })
+        // document.getElementById("pg-contato"))
+      ))
+      // {
+      //   $(".split").splitLines({
+      //     tag: '<div class="wrapper-mask-reverse"><span>',
+      //   }),
+          // $.ajaxSetup({
+          //   headers: {
+          //     "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+          //   },
+          // });
+        // var P = $("#form-contato"),
+        //   I = $("#feedback-contato");
         // $(P).submit(function (e) {
         //   e.preventDefault();
         //   var t = $(P).serialize();
@@ -1032,23 +1033,23 @@
         //           $(I).text(VARS.contactError);
         //       });
         // });
-      }
-      if (document.getElementById("pg-product")) {
-        (r = !0),
-          $("[data-fancybox-close]").on("click", function () {
-            try {
-              parent.jQuery.fancybox.close();
-            } catch (e) {
-              parent.$("#fancybox-overlay").hide(),
-                parent.$("#fancybox-wrap").hide();
-            }
-          }),
-          $.ajaxSetup({
-            headers: {
-              "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
-            },
-          });
-        (P = $("#form-contato")), (I = $("#feedback-contato"));
+      // }
+      // if (document.getElementById("pg-product")) {
+      //   (r = !0),
+      //     $("[data-fancybox-close]").on("click", function () {
+      //       try {
+      //         parent.jQuery.fancybox.close();
+      //       } catch (e) {
+      //         parent.$("#fancybox-overlay").hide(),
+      //           parent.$("#fancybox-wrap").hide();
+      //       }
+      //     }),
+      //     $.ajaxSetup({
+      //       headers: {
+      //         "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+      //       },
+      //     });
+      //   (P = $("#form-contato")), (I = $("#feedback-contato"));
         // $(P).submit(function (e) {
         //   e.preventDefault();
         //   var t = $(P).serialize();
@@ -1074,7 +1075,7 @@
         //           $(I).text(VARS.contactError);
         //       });
         // });
-      }
+      // }
       document.getElementById("pg-post") &&
         $(".editor iframe").wrap(
           '<div class="embed-responsive embed-responsive-16by9" />'

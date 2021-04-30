@@ -109,13 +109,14 @@
             </main>
         </div>
 
+
         {{--        @include('layout.site-layout.footer')--}}
     </div>
 
 @endsection
 
 @section('script')
-{{--    <script src="http://malsup.github.io/jquery.blockUI.js"></script>--}}
+    {{--    <script src="http://malsup.github.io/jquery.blockUI.js"></script>--}}
 
     <script>
 
@@ -124,7 +125,8 @@
             $('.sendMessage').click(function () {
 
                 var data = $('.contactUsForm').serialize();
-
+                // $('.sendMessage').css('display','none');
+                showLoadingImage();
                 // $.blockUI({
                 //     css: {
                 //         border: 'none',
@@ -143,22 +145,27 @@
                     data: data,
 
                     success: function (response, status) {
-
+                        hideLoadingImage();
                         if (response.result == 'success') {
                             // $.unblockUI();
+
                             successMsg(response.message);
                             // alert(response.message);
                             window.location.reload();
                         } else if (response.result == 'error') {
                             // $.unblockUI();
+                            // hideLoadingImage();
                             errorMsg(response.message);
+                            $('.sendMessage').css('display', 'block');
                             // alert(response.message);
                         }
                     },
                     error: function (data) {
                         $.each(data.responseJSON.errors, function (key, value) {
                             // $.unblockUI();
+                            hideLoadingImage();
                             errorMsg(value);
+                            $('.sendMessage').css('display', 'block');
                             // alert(value);
                         });
                     }

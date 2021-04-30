@@ -26,6 +26,7 @@
 
 @yield('content')
 
+@include('layout.site-layout.loader')
 
 @include('layout.site-layout.js')
 <!-- END Java Script for this page -->
