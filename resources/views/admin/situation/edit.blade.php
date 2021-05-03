@@ -273,7 +273,7 @@
             $.ajax({
 
                 type: 'POST',
-                url: '{{route("update-situation-gallery")}}',
+                url: '{{route("update-case-studies-gallery")}}',
                 data: formData,
                 cache: false,
                 contentType: false,
@@ -412,7 +412,7 @@
                 });
 
                 $.ajax({
-                    url: '{{url('delete-situation-gallery?id=')}}' + data,
+                    url: '{{url('delete-case-studies-gallery?id=')}}' + data,
                     data: data,
                     type: 'GET',
 

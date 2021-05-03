@@ -56,13 +56,13 @@
 
                                         @foreach($products as $product)
                                             @if(session()->get('language') == 'english')
-                                                <li class="active" data-search="{{$product->name_english}}">
+                                                <li class="active" data-search="{{$product->name_english}}" data-filter="{{$product->name_english}}">
                                             @elseif(session()->get('language') == 'french')
-                                                <li class="active" data-search="{{$product->name_french}}">
+                                                <li class="active" data-search="{{$product->name_french}}" data-filter="{{$product->name_french}}">
                                             @elseif(session()->get('language') == 'russia')
-                                                <li class="active" data-search="{{$product->name_russia}}">
+                                                <li class="active" data-search="{{$product->name_russia}}" data-filter="{{$product->name_russia}}">
                                             @else
-                                                <li class="active" data-search="{{$product->name_english}}">
+                                                <li class="active" data-search="{{$product->name_english}}" data-filter="{{$product->name_english}}">
                                                     @endif
 
                                                     <a href="{{route('shopDetail',['id'=>$product->id])}}" data-fancybox

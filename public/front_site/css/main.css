@@ -6948,7 +6948,8 @@ body {
 .logo {
     --color: var(--green-1);
     position: absolute;
-    top: 9rem;
+    top: 12rem;
+    /*top: 9rem;*/
     right: auto;
     bottom: auto;
     left: 50%;

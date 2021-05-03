@@ -24,10 +24,10 @@ Route::namespace("Site")->group(function () {
     Route::get('projects/{id}','PortfolioController@projectList')->name('portfolioProjectList');
     Route::get('project-detail/{id}','PortfolioController@projectDetail')->name('portfolioProjectDetail');
     Route::get('service-page','ServiceController@index')->name('service');
-    Route::get('situation','SituationController@index')->name('situation');
-    Route::get('situation-detail/{id}','SituationController@detail')->name('situationDetail');
-    Route::get('shop','ShopController@index')->name('shop');
-    Route::get('shop-detail/{id}','ShopController@detail')->name('shopDetail');
+    Route::get('case-studies','SituationController@index')->name('situation');
+    Route::get('case-studies-detail/{id}','SituationController@detail')->name('situationDetail');
+    Route::get('gear','ShopController@index')->name('shop');
+    Route::get('gear/{id}','ShopController@detail')->name('shopDetail');
     Route::get('contact-us','ContactUsController@index')->name('contactUs');
     Route::post('send-email','ContactUsController@postContactUs')->name('contactUsEmail');
 
@@ -102,14 +102,14 @@ Route::namespace('Admin')->group(function () {
         Route::post('update-service-gallery', 'ServiceController@saveGallery')->name('update-service-gallery');
         Route::get('delete-service-gallery', 'ServiceController@deleteGallery')->name('delete-service-gallery');
 
-        Route::get('situation-listing','SituationController@index')->name('situationListing');
-        Route::get('situation-create','SituationController@create')->name('situationCreate');
-        Route::post('situation-save','SituationController@save')->name('situationSave');
-        Route::get('situation-edit/{id}','SituationController@edit')->name('situationEdit');
-        Route::post('situation-update','SituationController@update')->name('situationUpdate');
-        Route::post('situation-delete','SituationController@delete')->name('situationDelete');
-        Route::post('update-situation-gallery', 'SituationController@saveGallery')->name('update-situation-gallery');
-        Route::get('delete-situation-gallery', 'SituationController@deleteGallery')->name('delete-situation-gallery');
+        Route::get('case-studies-listing','SituationController@index')->name('situationListing');
+        Route::get('case-studies-create','SituationController@create')->name('situationCreate');
+        Route::post('case-studies-save','SituationController@save')->name('situationSave');
+        Route::get('case-studies-edit/{id}','SituationController@edit')->name('situationEdit');
+        Route::post('case-studies-update','SituationController@update')->name('situationUpdate');
+        Route::post('case-studies-delete','SituationController@delete')->name('situationDelete');
+        Route::post('update-case-studies-gallery', 'SituationController@saveGallery')->name('update-situation-gallery');
+        Route::get('delete-case-studies-gallery', 'SituationController@deleteGallery')->name('delete-situation-gallery');
 
 
         Route::get('color-listing', 'ColorController@index')->name('colorListing');
