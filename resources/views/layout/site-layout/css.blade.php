@@ -55,7 +55,7 @@
 } */
 </style>
 
-
+<link href="{{asset('admin/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet" href="{{asset('front_site/css/fonts.css')}}" />
 <link rel="stylesheet" href="{{asset('front_site/css/main.css')}}" />
 

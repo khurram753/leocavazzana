@@ -63,10 +63,23 @@
 {{--<script src="{{asset('custom/js/jquery.blockUI.js')}}"></script>--}}
 <script src="{{asset('custom/js/toastr.min.js')}}"></script>
 <script src="{{asset('custom/js/keypress_functions.js')}}"></script>
+<script src="{{asset('admin/js/bootstrap.min.js')}}"></script>
 
 
 <script>
     $(document).ready(function() {
+        // cookies
+         $(window).on('load', function(){
+            $('.cookies_main').show();
+        });
+
+        $("#cookiedontAcceptBtn") .click(function(){
+            $(".cookies_detailPOP") .hide();
+        });
+        $("#cookiedontAcceptBtn") .click(function(){
+            $(".dont_acceptmian") .show();
+        })
+        // cookies end
         $('.changeLanguage').click(function(){
             var lang = $(this).data('lang');
 
@@ -134,5 +147,5 @@
         errorMsg("{{Session::get('error')}}");
     @endif
 
+        
 </script>
-

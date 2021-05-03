@@ -210,7 +210,7 @@
   border: none;
   border-radius: 5px;
   background: #19191a;
-  font-family: inherit;
+  font-family: 'Arial';
   font-size: 1rem; }
   .swal2-popup:focus {
     outline: none; }
@@ -501,7 +501,7 @@
   margin: 1.25em auto 1.875em;
   border: .25em solid transparent;
   border-radius: 50%;
-  font-family: inherit;
+  font-family: 'Arial';
   line-height: 5em;
   cursor: default;
   -webkit-user-select: none;
