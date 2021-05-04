@@ -237,7 +237,7 @@
             $('.cookies_main').css('display', 'none');
         } else {
             $('.cookies_main').css('display', 'flex');
-            $('.cookies_detailPOP').css('display', 'flex');
+            // $('.cookies_detailPOP').css('display', 'flex');
         }
     })();
 

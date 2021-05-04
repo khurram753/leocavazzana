@@ -261,7 +261,7 @@
         </div>
         <div class="accept_dont">
             <button type="button" class="Baccept" id="cookieAcceptBtn">I Accept</button>
-            <button type="button" class="Bacceptnot" id="cookiedontAcceptBtn">I Do not accept</button>
+            <button type="button" class="Bacceptnot" id="cookiedontAcceptBtn">I Do Not Accept</button>
         </div>
         <div class="btm_cookies">
             <h3>COOKIE CONTROL</h3>
