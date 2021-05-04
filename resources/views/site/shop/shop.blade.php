@@ -43,10 +43,10 @@
 
                                 </div>
 
-                                <div class="container-search" data-aos="fadeIn" data-search-set>
-                                    <label for="">Search</label>
-                                    <input type="search" class="search">
-                                </div>
+{{--                                <div class="container-search" data-aos="fadeIn" data-search-set>--}}
+{{--                                    <label for="">Search</label>--}}
+{{--                                    <input type="search" class="search">--}}
+{{--                                </div>--}}
                             </div>
 
                             <div class="col-lg-10 col-md-9 column-produtos">

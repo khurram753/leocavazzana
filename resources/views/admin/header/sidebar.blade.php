@@ -28,7 +28,7 @@
                         @endif
                         href="{{route('homePage')}}">
                         <i class="fas fa-tachometer-alt"></i> <span> HomePage Management  </span>
-{{--                        <span class="menu-arrow"></span>--}}
+                        {{--                        <span class="menu-arrow"></span>--}}
                     </a>
                 </li>
 
@@ -59,7 +59,7 @@
                         @endif
                         href="{{route('aboutUsManagement')}}">
                         <i class="fas fa-tachometer-alt"></i> <span> About Us Management  </span>
-{{--                        <span class="menu-arrow"></span>--}}
+                        {{--                        <span class="menu-arrow"></span>--}}
                     </a>
                 </li>
 
@@ -193,17 +193,16 @@
                 </li>
 
 
-                {{--                <li class="submenu">--}}
-                {{--                    <a--}}
-
-                {{--                        @if(Request()->route()->getName() == 'showCookie')--}}
-                {{--                        class="active"--}}
-                {{--                        @endif--}}
-                {{--                        href="{{route('showCookie')}}">--}}
-                {{--                        <i class="fas fa-tachometer-alt"></i> <span> Cookies </span>--}}
-                {{--                        --}}{{--<span class="menu-arrow"></span>--}}
-                {{--                    </a>--}}
-                {{--                </li>--}}
+                <li class="submenu">
+                    <a
+                        @if(Request()->route()->getName() == 'showCookie')
+                        class="active"
+                        @endif
+                        href="{{route('showCookie')}}">
+                        <i class="fas fa-tachometer-alt"></i> <span> Cookies </span>
+{{--                        <span class="menu-arrow"></span>--}}
+                    </a>
+                </li>
 
 
                 {{--                <li class="submenu">--}}

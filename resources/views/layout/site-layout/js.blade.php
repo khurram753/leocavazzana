@@ -69,9 +69,11 @@
 <script>
     $(document).ready(function() {
         // cookies
-         $(window).on('load', function(){
-            $('.cookies_main').show();
-        });
+        getCookies();
+
+        //  $(window).on('load', function(){
+        //     $('.cookies_main').show();
+        // });
 
         $("#cookiedontAcceptBtn") .click(function(){
             $(".cookies_detailPOP") .hide();
@@ -118,6 +120,24 @@
         });
     });
 
+
+    function getCookies() {
+        $.ajax({
+            type: 'GET',
+            url: '{{route("getCookies")}}',
+
+            success: function (response, status) {
+
+                if (response.result == 'success') {
+
+                    $('.cookie_terms_conditions').html(response.data);
+                } else if (response.result == 'error') {
+                }
+            }
+        });
+    }
+
+
     function showLoadingImage() {
         $(".main_lodder").show();
     }
@@ -147,5 +167,92 @@
         errorMsg("{{Session::get('error')}}");
     @endif
 
-        
+
+</script>
+
+
+<!-- js -->
+<script>
+
+    // if you want to see a cookie, delete 'seen-cookiePopup' from cookies first.
+
+    $(document).ready(function ($) {
+        // Get CookieBox
+        var cookieBox = document.getElementsByClassName('cookies_main_show');
+        // Get the <span> element that closes the cookiebox
+        var closeCookieBox = document.getElementsByClassName("cookieAcceptBtn");
+        // closeCookieBox.onclick = function() {
+        //     $(cookieBox).css('display','none');
+        // };
+        $('#cookieAcceptBtn').click(function () {
+            $('.cookies_main').css('display', 'none');
+        });
+    });
+
+    (function () {
+
+        /**
+         * Set cookie
+         *
+         * @param string name
+         * @param string value
+         * @param int days
+         * @param string path
+         * @see http://www.quirksmode.org/js/cookies.html
+         */
+        function createCookie(name, value, days, path) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toGMTString();
+            } else expires = "";
+            document.cookie = name + "=" + value + expires + "; path=" + path;
+        }
+
+        function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        // Set/update cookie
+        var cookieExpiry = 30;
+        var cookiePath = "/";
+
+        // document.getElementById("cookieAcceptBtn").addEventListener('click', function () {
+        //     createCookie('seen-cookiePopup', 'yes', cookieExpiry, cookiePath);
+        // });
+        $('#cookieAcceptBtn').click(function () {
+            createCookie('seen-cookiePopup', 'yes', cookieExpiry, cookiePath);
+        });
+
+        var cookiePopup = readCookie('seen-cookiePopup');
+        if (cookiePopup != null && cookiePopup == 'yes') {
+            $('.cookies_main').css('display', 'none');
+        } else {
+            $('.cookies_main').css('display', 'block');
+            $('.cookies_detailPOP').css('display', 'block');
+        }
+    })();
+
+
+</script>
+<script>
+    $(document).ready(function () {
+
+
+        $(".Bacceptnot").click(function () {
+            $(".cookies_detailPOP").hide();
+            $(".dont_acceptmian").show();
+
+
+        });
+
+    });
 </script>

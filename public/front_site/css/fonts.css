@@ -1,10 +1,11 @@
 @font-face {
     font-family: 'Arial';
-    src: url('..//css/fonts/ArialMT.eot');
-    src: url('ArialMT.eot?#iefix') format('embedded-opentype'),
-        url('..//css/fontsArialMT.woff') format('woff'),
-        url('..//css/fontsArialMT.ttf') format('truetype'),
-        url('..//css/fontsArialMT.svg#ArialMT') format('svg');
+    /*src: url('..//css/fonts/ArialMT.eot');*/
+    src: url('../css/fonts/ArialMT.eot');
+    src: url('../css/fonts/ArialMT.eot?#iefix') format('embedded-opentype'),
+    url('../css/fonts/ArialMT.woff') format('woff'),
+    url('../css/fonts/ArialMT.ttf') format('truetype'),
+    url('../css/fonts/ArialMT.svg#ArialMT') format('svg');
     font-style: normal;
     font-display: swap;
 }

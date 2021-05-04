@@ -26,6 +26,8 @@
 
 @yield('content')
 
+@include('site.home.include.cookie')
+
 @include('layout.site-layout.loader')
 
 @include('layout.site-layout.js')

@@ -32,6 +32,8 @@ Route::namespace("Site")->group(function () {
     Route::post('send-email','ContactUsController@postContactUs')->name('contactUsEmail');
 
     Route::get('change-language','HomeController@changeLanguage')->name('changeLanguage');
+    Route::get('cookies','CookieController@index')->name('getCookies');
+
 });
 
 Route::namespace('Admin')->group(function () {
@@ -136,6 +138,8 @@ Route::namespace('Admin')->group(function () {
         Route::post('product-delete', 'ProductController@delete')->name('productDelete');
         Route::get('product-change-status', 'ProductController@changeStatus')->name('productStatus');
 
+        Route::get('change-cookie', 'CookiesController@index')->name('showCookie');
+        Route::post('update-cookie', 'CookiesController@update')->name('cookieUpdate');
 
 
 
