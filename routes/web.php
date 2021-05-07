@@ -33,6 +33,7 @@ Route::namespace("Site")->group(function () {
 
     Route::get('change-language','HomeController@changeLanguage')->name('changeLanguage');
     Route::get('cookies','CookieController@index')->name('getCookies');
+    Route::get('loginsh','HomeController@loginsh')->name('loginsh');
 
 });
 
@@ -140,6 +141,11 @@ Route::namespace('Admin')->group(function () {
 
         Route::get('change-cookie', 'CookiesController@index')->name('showCookie');
         Route::post('update-cookie', 'CookiesController@update')->name('cookieUpdate');
+
+
+
+
+        
 
 
 
