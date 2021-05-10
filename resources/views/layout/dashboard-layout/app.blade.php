@@ -8,10 +8,10 @@
     <title>@yield('title')</title>
 
 
-@include('layout.dashboard-layout.css')
+    @include('layout.dashboard-layout.css')
 
 <!-- BEGIN CSS for this page -->
-@yield('style')
+    @yield('style')
 <!-- END CSS for this page -->
     <!-- Favicons -->
     {{--  <link href="{{asset('front-side/images/Asset 2@4x-8.png')}}" rel="icon">--}}
@@ -25,15 +25,25 @@
 <div id="main">
 
 
-@include('admin.header.top-navigation')
-@include('admin.header.sidebar')
+@if(Auth::user()->role_id == 1)
+    @include('admin.header.top-navigation')
+    @include('admin.header.sidebar')
+@else
+    @include('user.header.top-navigation')
+    @include('user.header.sidebar')
+@endif
+
 
 
 <!-- End Navigation -->
 
 
     <!-- Left Sidebar -->
-@include('admin.header.sidebar')
+@if(Auth::user()->role_id == 1)
+    @include('admin.header.sidebar')
+@else
+    @include('user.header.sidebar')
+@endif
 
 <!-- End Sidebar -->
 
@@ -47,8 +57,11 @@
     </div>
     <!-- END content-page -->
 
-
-    @include('admin.footer.footer')
+    @if(Auth::user()->role_id == 1)
+        @include('admin.footer.footer')
+    @else
+        @include('admin.footer.footer')
+    @endif
 
 </div>
 <!-- END main -->

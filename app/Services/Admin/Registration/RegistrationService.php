@@ -165,7 +165,7 @@ class RegistrationService
 
     public function logout()
     {
-        $url = 'loginPage';
+        $url = 'home';
         Auth::logout();
         return redirect()->route($url);
     }

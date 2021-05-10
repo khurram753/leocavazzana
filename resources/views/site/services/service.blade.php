@@ -51,7 +51,7 @@
                                                         </div>
                                                     </div>
                                                     <a class="link-01 link-underlined"
-                                                       href="javascript:void(0)">
+                                                       href="{{route('contactUs')}}">
                                                         <span>Contact</span>
                                                     </a>
                                                 </div>

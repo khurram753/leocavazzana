@@ -6174,7 +6174,7 @@ body {
     width: 11.2rem;
     height: 12rem;
     display: inline-block;
-    background: url(../images/contato/icon-lamparina.svg) no-repeat 50%;
+    background: url(../images/icon-lamparina.svg) no-repeat 50%;
     background-size: contain;
 }
 
@@ -14032,7 +14032,7 @@ textarea:-webkit-autofill:hover {
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: #444; 
+    background: #444;
 }
 .cookies_main a{
     color: #2b4937;
@@ -14377,7 +14377,7 @@ textarea:-webkit-autofill:hover {
   .form-af-be select:focus{
     outline: none;
   }
-  
+
   .container_cDDk input:checked ~ .checkmark_cDDk:after {
     display: block;
   }

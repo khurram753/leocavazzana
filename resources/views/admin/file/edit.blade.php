@@ -1,7 +1,7 @@
 @extends('layout.dashboard-layout.app')
 
 @section('title')
-    Create Designation
+    Edit File
 @endsection
 
 
@@ -12,26 +12,34 @@
             <div class="row">
                 <div class="col-xl-12 bh-mb">
                     <div class="breadcrumb-holder">
-                        <h1 class="main-title float-left">Create Designation</h1>
+                        <h1 class="main-title float-left">Edit File</h1>
                         <ol class="breadcrumb float-right">
                             <li class="breadcrumb-item">Home</li>
-                            <li class="breadcrumb-item active">Create Designation</li>
+                            <li class="breadcrumb-item active">Edit File</li>
                         </ol>
                         <div class="clearfix"></div>
                     </div>
                 </div>
             </div>
 
-            <form method="post" id="employeeForm">
+            <form method="post" id="updateEmployee">
                 @csrf
+                <input type="hidden" name="id" value="{{$data->id}}">
                 <div class="row">
 
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 custom-dbhome">
+
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Designation</label>
-                            <input type="text" class="form-control" name="name"
-                                   placeholder="Enter Name" required
-                                   maxlength="50">
+                            <div class="db-bannerIMG">
+
+                                <img class="image_1" src="{{asset('admin/images/no_image.jpg')}}">
+
+                            </div>
+                            <label for="exampleInputEmail1">Upload a Document</label>
+                            <input type="file" class="images_select" name="document"
+                                   accept=".doc,.docx,.pdf" value="{{$data->document}}"
+                                   onchange="readURL(this,'image_1');">
+
                         </div>
 
 
@@ -41,10 +49,10 @@
                 </div>
 
 
-                <button class="btn btn-primary" type="button" id="createBtn">Create</button>
+                <button class="btn btn-primary" type="button" id="createBtn">Update</button>
 
 
-                <a href="{{route('designationListing')}}">
+                <a href="{{route('fileListing')}}">
                     <button class="btn btn-primary" type="button">Cancel</button>
                 </a>
 
@@ -58,6 +66,9 @@
 
 @section('script')
 
+    {{--<script src="{{asset('site/js/moment.min.js')}}"></script>--}}
+
+    {{--<script src="{{asset('site/js/daterangepicker.js')}}"></script>--}}
 
     <script>
 
@@ -66,7 +77,9 @@
             $('#createBtn').click(function () {
 
 
-                var data = $('#employeeForm').serialize();
+
+
+                var data = $('#updateEmployee').serialize();
 
                 $.blockUI({
                     css: {
@@ -80,11 +93,10 @@
                     }
                 });
 
-
                 $.ajax({
 
                     type: 'POST',
-                    url: '{{route("designationSave")}}',
+                    url: '{{route("fileUpdate")}}',
                     data: data,
 
                     success: function (response, status) {
@@ -93,11 +105,11 @@
                             $.unblockUI();
                             successMsg(response.message);
 
-                            setTimeout(function () {
-                                    window.location.href = '{{route('designationListing')}}'
-                                }
-                                , 2000);
-                        } else if (response.result == 'error') {
+                            setTimeout(function(){
+                                    window.location.href='{{route('fileListing')}}'}
+                                ,2000);
+                        }
+                        else if(response.result == 'error'){
                             $.unblockUI();
                             errorMsg(response.message);
                         }
@@ -115,6 +127,7 @@
                 });
 
             });
+
 
 
 

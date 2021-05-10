@@ -33,26 +33,48 @@ Route::namespace("Site")->group(function () {
 
     Route::get('change-language','HomeController@changeLanguage')->name('changeLanguage');
     Route::get('cookies','CookieController@index')->name('getCookies');
-    Route::get('loginsh','HomeController@loginsh')->name('loginsh');
+
+    Route::get('login','LoginController@login')->name('userLogin');
+    Route::post('customer-login','LoginController@customerLogin')->name('customerLogin');
+    Route::post('lendor-login','LoginController@lendorLogin')->name('lendorLogin');
+
+    Route::get('register','RegisterController@register')->name('userRegister');
+    Route::post('customer-register','RegisterController@customerRegister')->name('customerRegister');
+    Route::post('lendor-register','RegisterController@lendorRegister')->name('lendorRegister');
+
+    Route::get('logout-user','LoginController@logout')->name('userLogout');
+
+    Route::get('/forget-password', 'ForgetPasswordController@forgetPasswordForm')->name('forgetPasswordForm');
+    Route::post('/forget-password', 'ForgetPasswordController@forgetPassword')->name('forgetPassword');
+
+    Route::get('reset/password/{token}', 'ForgetPasswordController@resetPassword')->name('resetPassword');
+    Route::post('change-password', 'ForgetPasswordController@changePassword')->name('changePassword');
+
+    Route::get('user-dashboard','DashboardController@dashboard')->name('userDashboard');
+
+    Route::get('create-request','DashboardController@requestPage')->name('requestPage');
+    Route::post('save-request','DashboardController@createRequest')->name('saveRequest');
+
+    Route::get('file-section','DashboardController@fileSection')->name('fileSection');
 
 });
 
 Route::namespace('Admin')->group(function () {
     Route::namespace("Authentication")->group(function () {
         Route::middleware('guest')->group(function () {
-            Route::get('login', 'LoginController@loginPage')->name('loginPage');
-            Route::post('login', 'LoginController@login')->name('loginUser');
+            Route::get('admin-login', 'LoginController@loginPage')->name('loginPage');
+            Route::post('admin-login', 'LoginController@login')->name('loginUser');
 
-            Route::get('/forget-password', 'ForgetPasswordController@forgetPasswordForm')->name('forgetPasswordForm');
-            Route::post('/forget-password', 'ForgetPasswordController@forgetPassword')->name('forgetPassword');
+            Route::get('/admin-forget-password', 'ForgetPasswordController@forgetPasswordForm')->name('forgetPasswordForm');
+            Route::post('/admin-forget-password', 'ForgetPasswordController@forgetPassword')->name('forgetPassword');
 
-            Route::get('reset/password/{token}', 'ForgetPasswordController@resetPassword')->name('resetPassword');
-            Route::post('change-password', 'ForgetPasswordController@changePassword')->name('changePassword');
+            Route::get('admin-reset/password/{token}', 'ForgetPasswordController@resetPassword')->name('resetPassword');
+            Route::post('admin-change-password', 'ForgetPasswordController@changePassword')->name('changePassword');
 
         });
 
 
-        Route::middleware(['Admin', 'auth'])->group(function () {
+        Route::middleware(['Admin','auth'])->group(function () {
             Route::get('/logout', "LogoutController@logout")->name('logoutUser');
 
         });
@@ -142,12 +164,12 @@ Route::namespace('Admin')->group(function () {
         Route::get('change-cookie', 'CookiesController@index')->name('showCookie');
         Route::post('update-cookie', 'CookiesController@update')->name('cookieUpdate');
 
-
-
-
-        
-
-
+        Route::get('file-listing', 'FileController@index')->name('fileListing');
+        Route::get('create-file', 'FileController@create')->name('fileCreate');
+        Route::post('save-file', 'FileController@save')->name('fileSave');
+        Route::get('edit-file/{id}', 'FileController@edit')->name('fileEdit');
+        Route::post('update-file', 'FileController@update')->name('fileUpdate');
+        Route::post('file-delete', 'FileController@delete')->name('fileDelete');
 
 
     });

@@ -576,6 +576,42 @@
                             <span data-letter="Contact">Contact</span>
                         </a>
                     </li>
+
+                    @guest
+                        <li>
+                            <a href="{{route('userLogin')}}" data-hover="contato--marker"
+                               class="strong-hover pg-contato--menu"
+                               data-menu-close>
+                                <span data-letter="Login">Login</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{route('userRegister')}}" data-hover="contato--marker"
+                               class="strong-hover pg-contato--menu"
+                               data-menu-close>
+                                <span data-letter="Register">Register</span>
+                            </a>
+                        </li>
+                    @else
+
+                        <li>
+                            <a href="{{route('userDashboard')}}" data-hover="contato--marker"
+                               class="strong-hover pg-contato--menu"
+                               data-menu-close>
+                                <span data-letter="Dashboard">Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{route('userLogout')}}" data-hover="contato--marker"
+                               class="strong-hover pg-contato--menu"
+                               data-menu-close>
+                                <span data-letter="Logout">Logout</span>
+                            </a>
+                        </li>
+                    @endif
+
                 </ul>
             @endif
         </div>

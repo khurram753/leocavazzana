@@ -204,6 +204,25 @@
                     </a>
                 </li>
 
+                <li class="submenu">
+                    <a
+
+                        @if(Request()->route()->getName() == 'fileListing' || Request()->route()->getName() == 'fileCreate')
+                        class="active"
+                        @endif
+                        href="javascript:void(0)">
+                        <i class="fab fa-product-hunt"></i><span> File Management </span>
+                        <span class="menu-arrow"></span></a>
+                    <ul class="list-unstyled">
+                        <li><a href="{{route('fileListing')}}">Listing</a></li>
+                        <li><a href="{{route('fileCreate')}}">Create</a></li>
+
+                    </ul>
+                </li>
+
+
+
+
 
                 {{--                <li class="submenu">--}}
                 {{--                    <a--}}
