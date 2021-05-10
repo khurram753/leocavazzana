@@ -7012,6 +7012,10 @@ body {
     content: " | ";
     left: 1.5rem;
 }
+.lang li:nth-last-child(2):before {
+    content: " | ";
+    left: 1.5rem;
+}
 
 .lang a,
 .lang li:last-child:before {
@@ -7020,7 +7024,7 @@ body {
 }
 
 .lang a {
-    margin-left: 2rem;
+    margin:  0 2rem;
     padding-bottom: 0.3rem;
     display: inline-flex;
 }
@@ -7077,7 +7081,7 @@ body {
     right: auto;
     bottom: auto;
     left: var(--padding-fluid);
-    z-index: 99;
+    z-index: 9999;
     outline: none;
     display: none;
     margin-right: auto;
@@ -7143,6 +7147,7 @@ nav.menu {
     color: var(--color-active);
     position: relative;
     display: block;
+    text-decoration: none;
 }
 
 .menu--wrapper .menu--list li a span {
@@ -7200,7 +7205,7 @@ nav.menu {
 
 nav.menu {
     left: 0;
-    z-index: 98;
+    z-index: 999;
     overflow-x: hidden;
     overflow-y: auto;
     pointer-events: none;
@@ -12089,7 +12094,7 @@ textarea:-webkit-autofill:hover {
     padding-left: 0;
 }
 
-#pg-contato .container-submit .bt-submit span {
+#pg-contato .container-submit button {
     color: var(--green-1);
     position: relative;
     padding-bottom: 0.3rem;
@@ -12099,6 +12104,21 @@ textarea:-webkit-autofill:hover {
     letter-spacing: 0.05em;
     line-height: 1.2em;
     display: inline-block;
+    outline: none;
+    background: 0;
+    border-radius: 0;
+    border: 0;
+    margin-top: 3rem;
+    font-size: 2.8rem;
+    line-height: 1.3em;
+    padding-left: 0;    outline: none;
+    background: 0;
+    border-radius: 0;
+    border: 0;
+    margin-top: 3rem;
+    font-size: 2.8rem;
+    line-height: 1.3em;
+    padding-left: 0;
 }
 
 #pg-contato .container-submit .bt-submit span:before {
@@ -14125,10 +14145,10 @@ textarea:-webkit-autofill:hover {
       pointer-events: none;
   }
   input.input1000{
-      background: transparent;
-      border: none;
-      border-bottom:1px solid rgba(0,0,0,0.12);
-      width:100%;
+    background: transparent;
+    border: none;
+    border-bottom:1px solid rgba(0,0,0,0.12);
+    width:100%;
     padding: 15px;
     height: auto;
     display: block;
@@ -14136,6 +14156,10 @@ textarea:-webkit-autofill:hover {
     box-sizing: border-box;
     transition: all .2s linear;
     line-height: 1;
+    font-size: 12px;
+  }
+  .toast{
+      font-size: 12px !important;
   }
   .focus-input1000::before{
       content: "";
@@ -14199,6 +14223,7 @@ textarea:-webkit-autofill:hover {
     position: relative;
     z-index: 999;
     color: #2b4937;
+    text-decoration: none !important;
   }
   .tabs-nav li a::before{
     content: "";
@@ -14373,6 +14398,7 @@ textarea:-webkit-autofill:hover {
       box-sizing: border-box;
       transition: all .2s linear;
       line-height: 1;
+      font-size: 12px;
   }
   .form-af-be select:focus{
     outline: none;
@@ -14388,7 +14414,7 @@ textarea:-webkit-autofill:hover {
       margin: auto;
       margin-bottom: 20px;
   }
-  .tabs-navb li a{
+  .tabs-navb li span{
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -14399,7 +14425,7 @@ textarea:-webkit-autofill:hover {
     color: #2B4936;
     font-size: 12px;
   }
-  .tabs-navb li.tab-activeb a{
+  .tabs-navb li.tab-activeb span{
     background: #2b4937;
     color: #fff;
   }

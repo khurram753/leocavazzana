@@ -252,7 +252,7 @@
     </button>
     <nav class="menu">
         <div class="menu--wrapper">
-            <div class="menu--mapa">
+            {{-- <div class="menu--mapa">
                 <svg xmlns="http://www.w3.org/2000/svg"
                      aria-hidden="true"
                      viewBox="0 0 120.46 1399.1">
@@ -332,7 +332,7 @@
                         </g>
                     </g>
                 </svg>
-            </div>
+            </div> --}}
             @if(session()->get('language') == 'english')
                 <ul class="menu--list">
                     <li>
