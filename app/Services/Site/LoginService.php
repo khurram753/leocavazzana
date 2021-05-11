@@ -5,6 +5,7 @@ namespace App\Services\Site;
 
 
 use App\HomePage;
+use App\PasswordReset;
 use App\Role;
 use App\User;
 use Illuminate\Support\Facades\Auth;
@@ -70,20 +71,23 @@ class LoginService
 
     public function forgetPasswordForm()
     {
-        return view('authentication.forget_password');
+        $data = HomePage::first();
+        return view('site.login.forgot_password',compact('data'));
     }
 
     public function forgetPassword($request)
     {
 
-        $user = User::where('email', $request->email)->first();
+        $user = User::where('email', $request->email)->where('role_id','!=',1)->first();
 
         if ($user) {
             $confirmation_code = Str::random(30);
             PasswordReset::insert(['email' => $request->email,
                 'token' => $confirmation_code]);
 
-            $user->adminSendPasswordResetNotification($confirmation_code);
+            $user->sendPasswordResetNotification($confirmation_code);
+
+//            $user->adminSendPasswordResetNotification($confirmation_code);
             return response()->json(['result' => 'success', 'message' => 'We just emailed a link to reset your password'], 200);
 
         } else {
@@ -102,7 +106,7 @@ class LoginService
 
 //            return redirect()->route('home')
 //                ->with(['openUpdatePasswordForm' => 'updatePasswordModal', 'email' => $data->email]);
-            return view('authentication.update_password',compact('data'));
+            return view('site.login.update_password',compact('data'));
         } else {
             return redirect()->route('userLogin')
                 ->with(['error' => 'Your token has been expired. Please request again']);

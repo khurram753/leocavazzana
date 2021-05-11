@@ -44,11 +44,11 @@ Route::namespace("Site")->group(function () {
 
     Route::get('logout-user','LoginController@logout')->name('userLogout');
 
-    Route::get('/forget-password', 'ForgetPasswordController@forgetPasswordForm')->name('forgetPasswordForm');
-    Route::post('/forget-password', 'ForgetPasswordController@forgetPassword')->name('forgetPassword');
+    Route::get('/forgot-password', 'ForgetPasswordController@forgetPasswordForm')->name('userForgetPasswordForm');
+    Route::post('/forgot-password', 'ForgetPasswordController@forgetPassword')->name('userForgetPassword');
 
-    Route::get('reset/password/{token}', 'ForgetPasswordController@resetPassword')->name('resetPassword');
-    Route::post('change-password', 'ForgetPasswordController@changePassword')->name('changePassword');
+    Route::get('reset/password/{token}', 'ForgetPasswordController@resetPassword')->name('userResetPassword');
+    Route::post('change-password', 'ForgetPasswordController@changePassword')->name('userChangePassword');
 
     Route::get('user-dashboard','DashboardController@dashboard')->name('userDashboard');
 

@@ -1,7 +1,7 @@
 @extends('layout.site-layout.index')
 
 @section('title')
-    Login
+    Reset Password
 @endsection
 
 @section('content')
@@ -14,55 +14,36 @@
                         <div class="row justify-content-center">
                             <div class="col-md-6 col-lg-4">
                                 <div class="login_leo">
-                                    <h2>Login</h2>
-                                    <p>Login to your account as:</p>
+                                    <h2>Reset Password</h2>
+
                                 </div>
                                 <!-- tabs section start -->
                                 <div class="main_tabs clearfix">
-                                    <ul class="tabs-nav">
-                                        <li class="">
-                                            <a href="#tab-1" rel="nofollow">Customer</a>
-                                        </li>
-                                        <li class="tab-active">
-                                            <a href="#tab-2" rel="nofollow">Lendor</a>
-                                        </li>
-                                    </ul>
+
                                     <div class="tabs-stage">
                                         <div class="hide_login" id="tab-1">
                                             <form class="customerForm">
                                                 @csrf
 
                                                 <div class="form-af-be">
-                                                    <input class="input1000" type="email" name="email" required>
-                                                    <span class="focus-input1000" data-placeholder="Email"></span>
+                                                    <input class="input1000" type="email" name="email" required value="{{$data->email}}">
+                                                    <span class="focus-input1000" data-placeholder="Email" ></span>
                                                 </div>
+
                                                 <div class="form-af-be">
                                                     <input class="input1000" type="password" name="password" required>
                                                     <span class="focus-input1000" data-placeholder="Password"></span>
                                                 </div>
-                                                <a class="forget_text" href="{{route('userForgetPasswordForm')}}">
-                                                    <span>I forgot my password</span>
-                                                </a>
-                                                <button type="button" class="loginBtn">Login</button>
-                                            </form>
-                                            <p>New to Here? <a href="{{route('userRegister')}}">Create an account </a> Now </p>
-                                        </div>
-                                        <div class="hide_login" id="tab-2">
-                                            <form class="lendorForm">
-                                                @csrf
+
                                                 <div class="form-af-be">
-                                                    <input class="input1000" type="email" name="email" required>
-                                                    <span class="focus-input1000" data-placeholder="Email"></span>
+                                                    <input class="input1000" type="password" name="password_confirmation" required>
+                                                    <span class="focus-input1000" data-placeholder="Confirm Password"></span>
                                                 </div>
-                                                <div class="form-af-be">
-                                                    <input class="input1000" type="password" name="password" required>
-                                                    <span class="focus-input1000" data-placeholder="Password"></span>
-                                                </div>
-                                                <a class="forget_text" href="{{route('userForgetPasswordForm')}}"><span>I forgot my password</span></a>
-                                                <button type="button" class="lendorLoginBtn">Login</button>
+                                                <button type="button" class="loginBtn">Reset</button>
                                             </form>
-                                            <p>New to Here? <a href="{{route('userRegister')}}">Create an account </a> Now </p>
+
                                         </div>
+
                                     </div>
                                 </div>
                                 <!-- tabs section end -->
@@ -80,47 +61,13 @@
 @section('script')
     <script>
         $(document).ready(function () {
-            $('.tabs-nav a').on('click', function (event) {
-                event.preventDefault();
-
-                $('.tab-active').removeClass('tab-active');
-                $(this).parent().addClass('tab-active');
-                $('.tabs-stage .hide_login').hide();
-                $($(this).attr('href')).show();
-            });
-
-            $('.tabs-nav a:first').trigger('click');
-            //
-
-            $('.tabs-navb a').on('click', function (event) {
-                event.preventDefault();
-
-                $('.tab-activeb').removeClass('tab-activeb');
-                $(this).parent().addClass('tab-activeb');
-                $('.tabs-stageb .hide_loginb').hide();
-                $($(this).attr('href')).show();
-            });
-
-            $('.tabs-nav a:first').trigger('click');
-            //
-
-
-            $('.input1000').each(function () {
-                $(this).on('blur', function () {
-                    if ($(this).val().trim() != "") {
-                        $(this).addClass('has-val');
-                    } else {
-                        $(this).removeClass('has-val');
-                    }
-                })
-            });
 
             $('.loginBtn').click(function(){
                 var data = $('.customerForm').serialize();
                 showLoadingImage();
                 $.ajax({
                     type: 'POST',
-                    url: '{{route("customerLogin")}}',
+                    url: '{{route("userChangePassword")}}',
                     data: data,
 
                     success: function (response, status) {
@@ -129,7 +76,10 @@
                             // $.unblockUI();
                             successMsg(response.message);
                             // alert(response.message);
-                            window.location.reload();
+                            setTimeout(function(){
+                                window.location.href = '{{route('userLogin')}}';
+                                }, 1000);
+
                         } else if (response.result == 'error') {
                             // $.unblockUI();
                             errorMsg(response.message);
