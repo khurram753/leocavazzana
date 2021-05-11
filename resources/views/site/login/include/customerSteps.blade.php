@@ -63,6 +63,7 @@
         </div>
         <div class="form-af-be">
             <select class="input1000" name="hear_about" required>
+                <option value="select"></option>
                 <option value="Direct contact by oceanis">Direct contact by oceanis</option>
                 <option value="Search Engine">Search Engine</option>
                 <option value="LinkedIn">LinkedIn</option>
