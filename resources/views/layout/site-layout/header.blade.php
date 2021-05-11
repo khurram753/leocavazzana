@@ -595,13 +595,15 @@
                         </li>
                     @else
 
-                        <li>
-                            <a href="{{route('userDashboard')}}" data-hover="contato--marker"
-                               class="strong-hover pg-contato--menu"
-                               data-menu-close>
-                                <span data-letter="Dashboard">Dashboard</span>
-                            </a>
-                        </li>
+                        @if(Auth::user()->role_id != 1)
+                            <li>
+                                <a href="{{route('userDashboard')}}" data-hover="contato--marker"
+                                   class="strong-hover pg-contato--menu"
+                                   data-menu-close>
+                                    <span data-letter="Dashboard">Dashboard</span>
+                                </a>
+                            </li>
+                        @endif
 
                         <li>
                             <a href="{{route('userLogout')}}" data-hover="contato--marker"
