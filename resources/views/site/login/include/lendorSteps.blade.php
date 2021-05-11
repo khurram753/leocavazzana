@@ -4,15 +4,15 @@
     <div class="hide_loginb lendorStep1"  id="tab-1bb">
         {{--    <form >--}}
         <div class="form-af-be">
-            <input class="input1000 first_name" onkeypress="return isCharacterKey(event)"  type="text" name="first_name" required>
+            <input class="input1000 lendor_first_name" onkeypress="return isCharacterKey(event)"  type="text" name="first_name" required>
             <span class="focus-input1000" data-placeholder="First Name"></span>
         </div>
         <div class="form-af-be">
-            <input class="input1000 last_name" onkeypress="return isCharacterKey(event)"  type="text" name="last_name" required>
+            <input class="input1000 lendor_last_name" onkeypress="return isCharacterKey(event)"  type="text" name="last_name" required>
             <span class="focus-input1000" data-placeholder="Last Name"></span>
         </div>
         <div class="form-af-be">
-            <input class="input1000 phone" onkeypress="return isPhoneNumber(event)" type="text" name="phone" required>
+            <input class="input1000 lendor_phone" onkeypress="return isPhoneNumber(event)" type="text" name="phone" required>
             <span class="focus-input1000" data-placeholder="Phone"></span>
         </div>
         <button class="step1Next" type="button">Next</button>
@@ -21,23 +21,23 @@
     <div class="hide_loginb lendorStep2" style="display: none" id="tab-2bb">
         {{--    <form class="lendorStep2">--}}
         <div class="form-af-be">
-            <input class="input1000 company" onkeypress="return isCharacterKey(event)" type="text" name="company" required>
+            <input class="input1000 lendor_company" onkeypress="return isCharacterKey(event)" type="text" name="company" required>
             <span class="focus-input1000"  data-placeholder="Company"></span>
         </div>
         <div class="form-af-be">
-            <input class="input1000 position" onkeypress="return isCharacterKey(event)" type="text" name="position" required>
+            <input class="input1000 lendor_position" onkeypress="return isCharacterKey(event)" type="text" name="position" required>
             <span class="focus-input1000" data-placeholder="Position"></span>
         </div>
         <div class="form-af-be">
-            <input class="input1000 street" onkeypress="return isCharacterKey(event)" type="text" name="street" required>
+            <input class="input1000 lendor_street" onkeypress="return isCharacterKey(event)" type="text" name="street" required>
             <span class="focus-input1000" data-placeholder="Street"></span>
         </div>
         <div class="form-af-be">
-            <input class="input1000 postal_code" onkeypress="return isCharacterKey(event)" type="text"  name="postal_code" required>
+            <input class="input1000 lendor_postal_code"  type="text"  name="postal_code" required>
             <span class="focus-input1000" data-placeholder="postal_code"></span>
         </div>
         <div class="form-af-be">
-            <input class="input1000 city" onkeypress="return isCharacterKey(event)" type="text" name="city" required>
+            <input class="input1000 lendor_city" onkeypress="return isCharacterKey(event)" type="text" name="city" required>
             <span class="focus-input1000" data-placeholder="City"></span>
         </div>
         <div class="form-af-be">
@@ -54,11 +54,11 @@
             <span class="focus-input1000" data-placeholder="Email"></span>
         </div>
         <div class="form-af-be">
-            <input class="input1000 password" type="password" name="password" required>
+            <input class="input1000 lendor_password" type="password" name="password" required>
             <span class="focus-input1000" data-placeholder="Password"></span>
         </div>
         <div class="form-af-be">
-            <input class="input1000 password_confirmation" type="password" name="password_confirmation" required>
+            <input class="input1000 lendor_password_confirmation" type="password" name="password_confirmation" required>
             <span class="focus-input1000" data-placeholder="Password Confirmation"></span>
         </div>
         <div class="form-af-be">

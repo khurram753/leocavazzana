@@ -138,17 +138,17 @@
 
                 var flag = 0;
 
-                if($('.first_name').val() == '')
+                if($('.lendor_first_name').val() == '')
                 {
                     flag = 1;
                     errorMsg('First Name is a Required Field');
                 }
-                if($('.last_name').val() == '')
+                if($('.lendor_last_name').val() == '')
                 {
                     flag = 1;
                     errorMsg('Last Name is a Required Field');
                 }
-                if($('.phone').val() == '')
+                if($('.lendor_phone').val() == '')
                 {
                     flag = 1;
                     errorMsg('Phone Number is a Required Field');
@@ -168,32 +168,32 @@
 
                 var flag = 0;
 
-                if($('.company').val() == '')
+                if($('.lendor_company').val() == '')
                 {
                     flag = 1;
                     errorMsg('Company is a Required Field');
                 }
-                if($('.position').val() == '')
+                if($('.lendor_position').val() == '')
                 {
                     flag = 1;
                     errorMsg('Position is a Required Field');
                 }
-                if($('.street').val() == '')
+                if($('.lendor_street').val() == '')
                 {
                     flag = 1;
                     errorMsg('Street is a Required Field');
                 }
-                if($('.postal_code').val() == '')
+                if($('.lendor_postal_code').val() == '')
                 {
                     flag = 1;
                     errorMsg('Postal Code is a Required Field');
                 }
-                if($('.city').val() == '')
+                if($('.lendor_city').val() == '')
                 {
                     flag = 1;
                     errorMsg('City is a Required Field');
                 }
-                if($('.country').val() == '')
+                if($('.lendor_country').val() == '')
                 {
                     flag = 1;
                     errorMsg('Country is a Required Field');

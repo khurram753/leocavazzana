@@ -33,7 +33,7 @@
             <span class="focus-input1000" data-placeholder="Street"></span>
         </div>
         <div class="form-af-be">
-            <input class="input1000 postal_code" onkeypress="return isCharacterKey(event)" type="text"  name="postal_code" required>
+            <input class="input1000 postal_code" type="text"  name="postal_code" required>
             <span class="focus-input1000" data-placeholder="postal_code"></span>
         </div>
         <div class="form-af-be">
