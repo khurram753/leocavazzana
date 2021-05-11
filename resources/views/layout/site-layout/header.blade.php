@@ -392,6 +392,45 @@
                             <span data-letter="Contact">Contact</span>
                         </a>
                     </li>
+
+                    @guest
+                        <li>
+                            <a href="{{route('userLogin')}}" data-hover="contato--marker"
+                               class="strong-hover pg-contato--menu"
+                               data-menu-close>
+                                <span data-letter="Login">Login</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{route('userRegister')}}" data-hover="contato--marker"
+                               class="strong-hover pg-contato--menu"
+                               data-menu-close>
+                                <span data-letter="Register">Register</span>
+                            </a>
+                        </li>
+                    @else
+
+                        @if(Auth::user()->role_id != 1)
+                            <li>
+                                <a href="{{route('userDashboard')}}" data-hover="contato--marker"
+                                   class="strong-hover pg-contato--menu"
+                                   data-menu-close>
+                                    <span data-letter="Dashboard">Dashboard</span>
+                                </a>
+                            </li>
+                        @endif
+
+                        <li>
+                            <a href="{{route('userLogout')}}" data-hover="contato--marker"
+                               class="strong-hover pg-contato--menu"
+                               data-menu-close>
+                                <span data-letter="Logout">Logout</span>
+                            </a>
+                        </li>
+                    @endif
+
+
                 </ul>
 
             @elseif(session()->get('language') == 'french')
@@ -454,6 +493,44 @@
                             <span data-letter="Contacter">Contacter</span>
                         </a>
                     </li>
+
+                    @guest
+                        <li>
+                            <a href="{{route('userLogin')}}" data-hover="contato--marker"
+                               class="strong-hover pg-contato--menu"
+                               data-menu-close>
+                                <span data-letter="Connexion">Connexion</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{route('userRegister')}}" data-hover="contato--marker"
+                               class="strong-hover pg-contato--menu"
+                               data-menu-close>
+                                <span data-letter="S'inscrire">S'inscrire</span>
+                            </a>
+                        </li>
+                    @else
+
+                        @if(Auth::user()->role_id != 1)
+                            <li>
+                                <a href="{{route('userDashboard')}}" data-hover="contato--marker"
+                                   class="strong-hover pg-contato--menu"
+                                   data-menu-close>
+                                    <span data-letter="Tableau de bord">Tableau de bord</span>
+                                </a>
+                            </li>
+                        @endif
+
+                        <li>
+                            <a href="{{route('userLogout')}}" data-hover="contato--marker"
+                               class="strong-hover pg-contato--menu"
+                               data-menu-close>
+                                <span data-letter="Se déconnecter">Se déconnecter</span>
+                            </a>
+                        </li>
+                    @endif
+
                 </ul>
 
             @elseif(session()->get('language') == 'russia')
@@ -515,6 +592,43 @@
                             <span data-letter="Контакт">Контакт</span>
                         </a>
                     </li>
+
+                    @guest
+                        <li>
+                            <a href="{{route('userLogin')}}" data-hover="contato--marker"
+                               class="strong-hover pg-contato--menu"
+                               data-menu-close>
+                                <span data-letter="Авторизоваться">Авторизоваться</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{route('userRegister')}}" data-hover="contato--marker"
+                               class="strong-hover pg-contato--menu"
+                               data-menu-close>
+                                <span data-letter="регистр">регистр</span>
+                            </a>
+                        </li>
+                    @else
+
+                        @if(Auth::user()->role_id != 1)
+                            <li>
+                                <a href="{{route('userDashboard')}}" data-hover="contato--marker"
+                                   class="strong-hover pg-contato--menu"
+                                   data-menu-close>
+                                    <span data-letter="Приборная панель">Приборная панель</span>
+                                </a>
+                            </li>
+                        @endif
+
+                        <li>
+                            <a href="{{route('userLogout')}}" data-hover="contato--marker"
+                               class="strong-hover pg-contato--menu"
+                               data-menu-close>
+                                <span data-letter="Выйти">Выйти</span>
+                            </a>
+                        </li>
+                    @endif
                 </ul>
 
             @else
