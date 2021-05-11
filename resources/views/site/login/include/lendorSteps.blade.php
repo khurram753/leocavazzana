@@ -41,7 +41,7 @@
             <span class="focus-input1000" data-placeholder="City"></span>
         </div>
         <div class="form-af-be">
-            <input class="input1000 country" onkeypress="return isCharacterKey(event)" type="text" name="country" required>
+            <input class="input1000 lendor_country" onkeypress="return isCharacterKey(event)" type="text" name="country" required>
             <span class="focus-input1000" data-placeholder="Country"></span>
         </div>
         <button class="step2Next" type="button">Next</button>

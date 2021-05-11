@@ -62,19 +62,19 @@
                                                     <li class="tab-activeb">
                                                         {{--                                                        <a href="#tab-1bb" rel="nofollow">1</a>--}}
                                                         {{--                                                        <a href="javascript:void(0)" rel="nofollow">--}}
-                                                        1
+                                                        <span>1</span>
                                                         {{--                                                        </a>--}}
                                                     </li>
                                                     <li class="">
                                                         {{--                                                        <a href="#tab-2bb" rel="nofollow">2</a>--}}
                                                         {{--                                                        <a href="javascript:void(0)" rel="nofollow">--}}
-                                                        2
+                                                        <span>2</span>
                                                         {{--                                                        </a>--}}
                                                     </li>
                                                     <li class="">
                                                         {{--                                                        <a href="#tab-3bb" rel="nofollow">3</a>--}}
                                                         {{--                                                        <a href="javascript:void(0)" rel="nofollow">--}}
-                                                        3
+                                                        <span>3</span>
                                                         {{--                                                        </a>--}}
                                                     </li>
                                                 </ul>
