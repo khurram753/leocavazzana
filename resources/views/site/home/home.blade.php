@@ -138,7 +138,7 @@
                                     </span>
                                 </a>
 
-                                <span class="copyright">All rights reserved © {{\Carbon\Carbon::now()->format('Y')}}</span>
+                                <span class="copyright">All rights reserved CEDRUS © {{\Carbon\Carbon::now()->format('Y')}}</span>
                             </div>
                         </div>
                     </div>

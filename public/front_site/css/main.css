@@ -5772,8 +5772,8 @@ html {
 }
 
 .imgs img {
-    -o-object-fit: cover;
-    object-fit: cover;
+    -o-object-fit: contain;
+    object-fit: contain;
 }
 
 .imgs .thumb {
@@ -13034,8 +13034,8 @@ textarea:-webkit-autofill:hover {
 }
 
 #pg-historias #carousel .swiper-slide a .container-img .imgs img {
-    -o-object-fit: cover;
-    object-fit: cover;
+    -o-object-fit: contain;
+    object-fit: contain;
 }
 
 @media only screen and (min-width: 1025.1px) {
