@@ -13,7 +13,7 @@
     <div class="wrapper" id="pg-home">
         <div id="main-transition">
             <main>
-                <section class="section-1 section">
+                <section class="section-1 section about-main">
                     <div class="container-fluid">
                         <div class="row">
                             {!! $data->description_english !!}

@@ -7595,7 +7595,7 @@ body.menu-leave .menu--list li:nth-child(9) a {
     top: auto;
     right: auto;
     bottom: 11.5rem;
-    left: -12.8rem;
+    left: 0rem;
     z-index: 54;
     overflow: hidden;
 }
@@ -11368,7 +11368,16 @@ h2,
     flex-direction: column;
     height: calc(100vh - var(--header-height) - 12rem);
 }
-
+.about-main .text span, .about-main .text p, .about-main span{
+    font-size: inherit !important;
+    letter-spacing: inherit !important;
+    background: transparent !important;
+    color: inherit !important;
+}
+.about-main h2, .about-main h3, .about-main h4{
+    background: transparent !important;
+    color: inherit !important;
+}
 @media only screen and (min-width: 1025.1px) {
     #pg-loja .aside {
         padding-left: 10rem;

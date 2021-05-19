@@ -10,7 +10,7 @@
     <div class="wrapper" id="pg-sobre">
         <div id="main-transition">
             <main>
-                <section class="section section-1">
+                <section class="section section-1 about-main">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-lg-4 column-1 flex-center">
