@@ -14473,10 +14473,14 @@ textarea:-webkit-autofill:hover {
     text-align: center;
   }
   .for_allhome_txt p, .for_allhome_txt span{
-    margin-bottom: 10px;
     text-align: center;
     width: 100%;
-    font-size: 12px;
+  }
+  .for_allhome_txt h1 span, .for_allhome_txt h1{
+    font-size: 36px !important;
+    line-height: normal !important;
+    font-weight: 700 !important;
+    text-align: center !important;
   }
   @media (max-width:767px){
     .tabs-navb{
