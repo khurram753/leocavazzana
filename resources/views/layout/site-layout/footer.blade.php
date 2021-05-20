@@ -51,17 +51,55 @@
                         to request what data may be held by yourself at anytime
                     @endif
                 </span>
-                <span> &bull;
-                    <a href="#" rel="noopener" target="_blank">
-                        <span class="fw-bold">Terms and Condition</span>
-                    </a>&bull;
-                    <a href="#" rel="noopener" target="_blank">
-                        <span class="fw-bold">Privacy Policy</span>
-                    </a>&bull;
-                    <a href="#" rel="noopener" target="_blank">
-                        <span class="fw-bold">Disclaimer</span>
-                    </a>
-                </span>
+                @if(session()->get('language') == 'english')
+                    <span> &bull;
+                        <a href="{{route('terms')}}" rel="noopener">
+                            <span class="fw-bold">Terms and Condition</span>
+                        </a>&bull;
+                        <a href="{{route('privacy')}}" rel="noopener">
+                            <span class="fw-bold">Privacy Policy</span>
+                        </a>&bull;
+                        <a href="{{route('disclaimer')}}" rel="noopener">
+                            <span class="fw-bold">Disclaimer</span>
+                        </a>
+                    </span>
+                @elseif(session()->get('language') == 'french')
+                    <span> &bull;
+                        <a href="{{route('terms')}}" rel="noopener">
+                            <span class="fw-bold">Termes et conditions</span>
+                        </a>&bull;
+                        <a href="{{route('privacy')}}" rel="noopener">
+                            <span class="fw-bold">Politique de confidentialité</span>
+                        </a>&bull;
+                        <a href="{{route('disclaimer')}}" rel="noopener">
+                            <span class="fw-bold">Avertissement</span>
+                        </a>
+                    </span>
+                @elseif(session()->get('language') == 'russia')
+                    <span> &bull;
+                        <a href="{{route('terms')}}" rel="noopener">
+                            <span class="fw-bold">Сроки и условия</span>
+                        </a>&bull;
+                        <a href="{{route('privacy')}}" rel="noopener">
+                            <span class="fw-bold">Политика конфиденциальности</span>
+                        </a>&bull;
+                        <a href="{{route('disclaimer')}}" rel="noopener">
+                            <span class="fw-bold">Отказ от ответственности</span>
+                        </a>
+                    </span>
+                @else
+                    <span> &bull;
+                        <a href="{{route('terms')}}" rel="noopener">
+                            <span class="fw-bold">Terms and Condition</span>
+                        </a>&bull;
+                        <a href="{{route('privacy')}}" rel="noopener">
+                            <span class="fw-bold">Privacy Policy</span>
+                        </a>&bull;
+                        <a href="{{route('disclaimer')}}" rel="noopener">
+                            <span class="fw-bold">Disclaimer</span>
+                        </a>
+                    </span>
+                @endif
             </div>
         </div>
     </div>

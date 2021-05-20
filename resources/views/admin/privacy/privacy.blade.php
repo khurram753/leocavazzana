@@ -1,7 +1,7 @@
 @extends('layout.dashboard-layout.app')
 
 @section('title')
-    About Us Management
+    Privacy Policy Management
 @endsection
 
 @section('style')
@@ -21,10 +21,10 @@
             <div class="row">
                 <div class="col-xl-12 bh-mb">
                     <div class="breadcrumb-holder">
-                        <h1 class="main-title float-left">About Us Management</h1>
+                        <h1 class="main-title float-left">Privacy Policy Management</h1>
                         <ol class="breadcrumb float-right">
                             <li class="breadcrumb-item">Home</li>
-                            <li class="breadcrumb-item active">About Us Management</li>
+                            <li class="breadcrumb-item active">Privacy Policy Management</li>
                         </ol>
                         <div class="clearfix"></div>
                     </div>
@@ -156,7 +156,7 @@
                 $.ajax({
 
                     type: 'POST',
-                    url: '{{route("aboutUsSave")}}',
+                    url: '{{route("privacySave")}}',
                     data: data,
                     cache: false,
                     contentType: false,

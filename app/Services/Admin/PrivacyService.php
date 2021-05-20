@@ -8,20 +8,21 @@ use App\AboutUs;
 use App\Disclaimer;
 use App\Helpers\ImageUploadHelper;
 use App\HomePage;
+use App\PrivacyPolicy;
 use File;
 
 
-class DisclaimerService
+class PrivacyService
 {
     public function index()
     {
-        $data = Disclaimer::first();
-        return view('admin.disclaimer.disclaimer', compact('data'));
+        $data = PrivacyPolicy::first();
+        return view('admin.privacy.privacy', compact('data'));
     }
 
     public function save($request)
     {
-        $aboutUs = Disclaimer::find($request->id);
+        $aboutUs = PrivacyPolicy::find($request->id);
 
         if ($aboutUs) {
 
@@ -30,12 +31,12 @@ class DisclaimerService
                 $ext = $image->getClientOriginalExtension();
                 $fileName = $image->getClientOriginalName();
                 $fileNameUpload = time() . "-" . $fileName;
-                $path = public_path('disclaimer/images/');
+                $path = public_path('privacy/images/');
                 if (!file_exists($path)) {
                     File::makeDirectory($path, 0777, true);
                 }
 
-                $imageSave = ImageUploadHelper::saveImage($image, $fileNameUpload, 'disclaimer/images/');
+                $imageSave = ImageUploadHelper::saveImage($image, $fileNameUpload, 'privacy/images/');
                 $save_image = $imageSave;
 
                 $aboutUs->image = $save_image;

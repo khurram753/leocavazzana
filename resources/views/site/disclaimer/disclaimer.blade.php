@@ -1,7 +1,7 @@
 @extends('layout.site-layout.index')
 
 @section('title')
-    About Us
+    Disclaimer
 @endsection
 
 @section('content')
