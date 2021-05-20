@@ -61,3 +61,12 @@
 
 <script defer src="{{asset('front_site/js/libs.js')}}"></script>
 <script defer src="{{asset('front_site/js/main.js')}}"></script>
+
+@if(Request()->route()->getName() == 'aboutUs' || Request()->route()->getName() == 'privacy' || Request()->route()->getName() == 'disclaimer'
+|| Request()->route()->getName() == 'terms' || Request()->route()->getName() == 'portfolio' || Request()->route()->getName() == 'situation' )
+<style>
+    .lang a, .lang li:nth-last-child(2):before{
+        color: #fff !important;
+    }
+</style>
+@endif
