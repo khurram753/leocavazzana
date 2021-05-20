@@ -14,7 +14,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-lg-2 aside">
-                                <i class="icon-lamparina" data-aos="fadeIn"></i>
+                                {{-- <i class="icon-lamparina" data-aos="fadeIn"></i> --}}
 
                                 <h1 data-aos class="fs-60 split">Contact!
                                     <br>
