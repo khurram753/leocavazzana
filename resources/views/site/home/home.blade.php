@@ -176,7 +176,7 @@
 
         </div>
 
-{{--        @include('layout.site-layout.footer')--}}
+        @include('layout.site-layout.footer')
     </div>
 
 

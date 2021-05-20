@@ -63,6 +63,45 @@
                     </a>
                 </li>
 
+
+                <li class="submenu">
+                    <a
+
+                        @if(Request()->route()->getName() == 'disclaimerManagement')
+                        class="active"
+                        @endif
+                        href="{{route('disclaimerManagement')}}">
+                        <i class="fas fa-tachometer-alt"></i> <span> Disclaimer Management  </span>
+                        {{--                        <span class="menu-arrow"></span>--}}
+                    </a>
+                </li>
+
+
+                <li class="submenu">
+                    <a
+
+                        @if(Request()->route()->getName() == 'privacyManagement')
+                        class="active"
+                        @endif
+                        href="{{route('privacyManagement')}}">
+                        <i class="fas fa-tachometer-alt"></i> <span> Privacy Policy Management  </span>
+                        {{--                        <span class="menu-arrow"></span>--}}
+                    </a>
+                </li>
+
+
+                <li class="submenu">
+                    <a
+
+                        @if(Request()->route()->getName() == 'termsManagement')
+                        class="active"
+                        @endif
+                        href="{{route('termsManagement')}}">
+                        <i class="fas fa-tachometer-alt"></i> <span> Terms & Condition Management  </span>
+                        {{--                        <span class="menu-arrow"></span>--}}
+                    </a>
+                </li>
+
                 <li class="submenu">
                     <a
 
