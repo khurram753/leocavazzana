@@ -7458,6 +7458,8 @@ body.menu-leave .menu--list li:nth-child(9) a {
     margin-top: 10rem;
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
+    display: flex;
+    justify-content: center;
     border-top: 1px solid var(--color);
     color: var(--color);
 }
@@ -11368,7 +11370,7 @@ h2,
     flex-direction: column;
     height: calc(100vh - var(--header-height) - 12rem);
 }
-.about-main .text span, .about-main .text p, .about-main span{
+/* .about-main .text span, .about-main .text p, .about-main span{
     font-size: inherit !important;
     letter-spacing: inherit !important;
     background: transparent !important;
@@ -11378,7 +11380,7 @@ h2,
 .about-main h2, .about-main h3, .about-main h4{
     background: transparent !important;
     color: inherit !important;
-}
+} */
 @media only screen and (min-width: 1025.1px) {
     #pg-loja .aside {
         padding-left: 10rem;
@@ -14469,6 +14471,12 @@ textarea:-webkit-autofill:hover {
     color: var(--white-1);
     margin-bottom: 10px;
     text-align: center;
+  }
+  .for_allhome_txt p, .for_allhome_txt span{
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
   }
   @media (max-width:767px){
     .tabs-navb{

@@ -13,7 +13,7 @@
                 <section class="section section-1 about-main">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-lg-4 column-1 flex-center">
+                            <div class="col-lg-4 column-1 flex-center for_all_txt">
                                 <div>
                                     @if(session()->get('language') == 'english')
                                         {!! $data->description_english !!}

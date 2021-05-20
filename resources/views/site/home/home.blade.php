@@ -16,7 +16,9 @@
                 <section class="section-1 section about-main">
                     <div class="container-fluid">
                         <div class="row">
+                            <div class="col-lg-4 column-1 for_allhome_txt">
                             {!! $data->description_english !!}
+                            </div>
                             {{--                            <div class="col-lg-3 column-1">--}}
                             {{--                                <i class="icon-tree" data-aos="fadeIn"></i>--}}
 
@@ -111,14 +113,14 @@
                                     </div>
                                 </div>
 
-                                <div class="ready-for-everywhere">
+                                {{-- <div class="ready-for-everywhere">
                                     <img
                                         src="{{asset('front_site')}}/images/ready-for-everywhere.svg"
                                         class=""
                                         alt="From Brazil, Ready for Everywhere"
                                         data-aos="reveal-left"
                                     />
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
 
