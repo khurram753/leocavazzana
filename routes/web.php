@@ -104,8 +104,8 @@ Route::namespace('Admin')->group(function () {
         Route::get('disclaimer-management','DisclaimerController@index')->name('disclaimerManagement');
         Route::post('disclaimer-save','DisclaimerController@save')->name('disclaimerSave');
 
-        Route::get('privacy-policy-management','PrivacyPolicyController@index')->name('privacyPolicyManagement');
-        Route::post('privacy-policy-save','PrivacyPolicyController@save')->name('privacyPolicySave');
+        Route::get('privacy-policy-management','PrivacyPolicyController@index')->name('privacyManagement');
+        Route::post('privacy-policy-save','PrivacyPolicyController@save')->name('privacySave');
 
         Route::get('terms-condition-management','TermsController@index')->name('termsManagement');
         Route::post('terms-condition-save','TermsController@save')->name('termsSave');
