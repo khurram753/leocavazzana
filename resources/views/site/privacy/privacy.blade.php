@@ -1,10 +1,8 @@
 @extends('layout.site-layout.index')
 
 @section('title')
-    About Us
+    Privacy Policy
 @endsection
-
-
 
 @section('content')
     @include('layout.site-layout.header')
@@ -15,7 +13,7 @@
                 <section class="section section-1 about-main">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-lg-4 column-1 flex-center for_all_txt">
+                            <div class="col-lg-4 column-1 flex-center">
                                 <div>
                                     @if(session()->get('language') == 'english')
                                         {!! $data->description_english !!}
@@ -48,12 +46,12 @@
                                     {{--                                        those stories through my work.--}}
                                     {{--                                    </div>--}}
 
-                                    {{-- <img
+                                    <img
                                         data-aos="fadeInUp"
                                         class="selo"
                                         src="{{asset('front_site/images/selo-discover-new-experiences.svg')}}"
                                         alt="Discover new Experiences"
-                                    /> --}}
+                                    />
                                 </div>
                             </div>
                             <div class="col-lg-8 column-2">

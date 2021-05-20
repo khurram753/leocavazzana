@@ -135,30 +135,8 @@
             </main>
         </div>
 
-        <footer id="footer">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12 flex-between assinaturas">
-              <span
-              >Design &bull;
-                <a href="https://lasca.studio" rel="noopener" target="_blank"
-                ><span class="fw-bold">Lasca</span></a
-                ></span
-              >
+        @include('layout.site-layout.footer')
 
-                        <span
-                        >Development &bull;
-                <a
-                    href="https://programatorio.com"
-                    rel="noopener"
-                    target="_blank"
-                ><span class="fw-bold">Programatório</span></a
-                ></span
-                        >
-                    </div>
-                </div>
-            </div>
-        </footer>
     </div>
 
 

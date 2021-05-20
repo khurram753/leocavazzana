@@ -3,13 +3,15 @@
 
     <!-- LOGO -->
     <div class="headerbar-left align-items-center justify-content-between">
-{{--                <a href="{{route('adminDashboard')}}" class="logo">--}}
-{{--                    <span><img alt="Logo" src="{{asset('admin/images/Assetlogo.png')}}"/></span>--}}
-{{--                    <img alt="Logo" src="{{asset('admin/images/favicon.png')}}"/>--}}
-{{--                </a>--}}
+                <a href="{{route('home')}}" class="logo">
+                    <span>
+                        <img alt="Logo" src="{{asset('front_site/images/leo_logo.png')}}"/>
+                    </span>
+
+                </a>
 
 
-        <h1 class="logo"><a href="{{route('home')}}" class="site_name">LEO</a></h1>
+{{--        <h1 class="logo"><a href="{{route('home')}}" class="site_name">LEO</a></h1>--}}
 
     </div>
 

@@ -129,6 +129,9 @@
             @include('site.home.include.clients_section')
         </div>
 
+
+        @include('layout.site-layout.footer')
+
     </div>
 
 

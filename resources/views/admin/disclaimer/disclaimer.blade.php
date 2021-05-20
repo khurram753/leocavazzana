@@ -1,7 +1,7 @@
 @extends('layout.dashboard-layout.app')
 
 @section('title')
-    About Us Management
+    Disclaimer Management
 @endsection
 
 @section('style')
@@ -21,10 +21,10 @@
             <div class="row">
                 <div class="col-xl-12 bh-mb">
                     <div class="breadcrumb-holder">
-                        <h1 class="main-title float-left">About Us Management</h1>
+                        <h1 class="main-title float-left">Disclaimer Management</h1>
                         <ol class="breadcrumb float-right">
                             <li class="breadcrumb-item">Home</li>
-                            <li class="breadcrumb-item active">About Us Management</li>
+                            <li class="breadcrumb-item active">Disclaimer Management</li>
                         </ol>
                         <div class="clearfix"></div>
                     </div>
@@ -62,8 +62,9 @@
                         <div class="form-group">
 
                             <label for="exampleInputEmail1"> Description in English </label>
-                            <textarea class="form-control editor" name="description_english" placeholder="Enter Short Description in English"
-                                   >{{$data->description_english}}</textarea>
+                            <textarea class="form-control editor" name="description_english"
+                                      placeholder="Enter Short Description in English"
+                            >{{$data->description_english}}</textarea>
 
                         </div>
 
@@ -71,8 +72,9 @@
                         <div class="form-group">
 
                             <label for="exampleInputEmail1"> Description in Russia</label>
-                            <textarea class="form-control editor" name="description_russia" placeholder="Enter Short Description in Russia"
-                                   >{{$data->description_russia}}</textarea>
+                            <textarea class="form-control editor" name="description_russia"
+                                      placeholder="Enter Short Description in Russia"
+                            >{{$data->description_russia}}</textarea>
 
                         </div>
 
@@ -80,8 +82,9 @@
                         <div class="form-group">
 
                             <label for="exampleInputEmail1"> Description in French </label>
-                            <textarea class="form-control editor" name="description_french" type="email" placeholder="Enter Short Description in French"
-                                   >{{$data->description_french}}</textarea>
+                            <textarea class="form-control editor" name="description_french" type="email"
+                                      placeholder="Enter Short Description in French"
+                            >{{$data->description_french}}</textarea>
 
                         </div>
 
@@ -156,7 +159,7 @@
                 $.ajax({
 
                     type: 'POST',
-                    url: '{{route("aboutUsSave")}}',
+                    url: '{{route("disclaimerSave")}}',
                     data: data,
                     cache: false,
                     contentType: false,

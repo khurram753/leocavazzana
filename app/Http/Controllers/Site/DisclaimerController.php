@@ -1,20 +1,16 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
-use App\Services\Admin\DisclaimerService;
+use App\Services\Site\DisclaimerService;
 use Illuminate\Http\Request;
 
 class DisclaimerController extends Controller
 {
+
     public function index(DisclaimerService $disclaimerService)
     {
         return $disclaimerService->index();
-    }
-
-    public function save(Request $request,DisclaimerService $disclaimerService)
-    {
-        return $disclaimerService->save($request);
     }
 }
