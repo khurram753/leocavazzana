@@ -19,13 +19,32 @@
                                 <h1 data-aos class="fs-60 split">Contact!
                                     <br>
                                     <p style="font-size: 12px; line-height: 2">
-                                        To help us best serve your inquiry, we recommend that you first describe the
-                                        issue you’re having before telling us what you want to achieve. You may also
-                                        email or call us to make an appointment. Our general response time is one
-                                        business day.
+                                        @if(session()->get('language') == 'english')
+                                            To help us best serve your inquiry, we recommend that you first describe the
+                                            issue you’re having before telling us what you want to achieve. You may also
+                                            email or call us to make an appointment. Our general response time is one
+                                            business day.
 
-                                        Please note your data is precious to us, for further information on how we
-                                        handle case data, please see our Privacy Policy.</p>
+                                            Please note your data is precious to us, for further information on how we
+                                            handle case data, please see our Privacy Policy.
+                                        @elseif(session()->get('language') == 'french')
+                                            Pour nous aider à mieux répondre à votre demande, nous vous recommandons de décrire d'abord le problème que vous rencontrez avant de nous dire ce que vous souhaitez réaliser. Vous pouvez également nous envoyer un e-mail ou nous appeler pour prendre rendez-vous. Notre délai de réponse général est d'un jour ouvrable.
+
+                                            Veuillez noter que vos données nous sont précieuses, pour plus d'informations sur la façon dont nous traitons les données de cas, veuillez consulter notre politique de confidentialité.
+                                        @elseif(session()->get('language') == 'russia')
+                                            Чтобы помочь нам наилучшим образом обработать ваш запрос, мы рекомендуем сначала описать проблему, с которой вы столкнулись, прежде чем сообщать нам, чего вы хотите достичь. Вы также можете написать нам по электронной почте или позвонить, чтобы записаться на прием. Обычно мы отвечаем за один рабочий день.
+
+                                            Обратите внимание, что ваши данные очень важны для нас. Для получения дополнительной информации о том, как мы обрабатываем данные по делам, ознакомьтесь с нашей Политикой конфиденциальности.
+                                        @else
+                                            To help us best serve your inquiry, we recommend that you first describe the
+                                            issue you’re having before telling us what you want to achieve. You may also
+                                            email or call us to make an appointment. Our general response time is one
+                                            business day.
+
+                                            Please note your data is precious to us, for further information on how we
+                                            handle case data, please see our Privacy Policy.
+                                        @endif
+                                    </p>
                                 </h1>
 
 
