@@ -13,12 +13,12 @@
                 <section class="">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-lg-2 aside">
+                            <div class="col-lg-3 aside">
                                 {{-- <i class="icon-lamparina" data-aos="fadeIn"></i> --}}
 
                                 <h1 data-aos class="fs-60 split">Contact!
                                     <br>
-                                    <p style="font-size: 12px; line-height: 2">
+                                    <p style="font-size: 12px; line-height: 2; margin-top:10px;">
                                         @if(session()->get('language') == 'english')
                                             To help us best serve your inquiry, we recommend that you first describe the
                                             issue you’re having before telling us what you want to achieve. You may also
@@ -79,7 +79,7 @@
                                 </ul>
                             </div>
 
-                            <div class="col-lg-7 column-contato">
+                            <div class="col-lg-6 column-contato">
                                 <div></div>
                                 <form id="form-contato" class="row contactUsForm" data-aos="fadeIn">
                                     @csrf
