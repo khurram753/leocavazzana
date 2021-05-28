@@ -124,16 +124,13 @@
                             </div>
                         </div>
 
-                        <div class="row row-2">
-                            <div class="col-lg-3">
+                        <div class="row row-2 d-flex justify-content-between">
                                 <a href="javascript:void(0)" class="btn-arrow btn-clientes">
                                     <span>
                                         <strong>Clients</strong>
                                     </span>
                                     <i><span></span></i>
                                 </a>
-                            </div>
-                            <div class="col-lg-8 flex-between">
                                 <a href="tel:+{{$data->phone_number}}" class="strong-hover tel-footer">
                                     <span data-letter="+{{$data->phone_number}}">
                                         +{{$data->phone_number}}
@@ -141,7 +138,6 @@
                                 </a>
 
                                 <span class="copyright">All rights reserved CEDRUS © {{\Carbon\Carbon::now()->format('Y')}}</span>
-                            </div>
                         </div>
                     </div>
                 </section>

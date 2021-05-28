@@ -1,4 +1,5 @@
 <header id="header">
+    <a class="login-btn" href="#">Login</a>
     <a href="{{route('home')}}" class="logo"
        data-pjax aria-label="Home - Leo Cavazzana - Freeland Photographer">
         {{--        <svg xmlns="http://www.w3.org/2000/svg"--}}
@@ -218,6 +219,7 @@
     </a>
 
     <ul class="lang">
+        
         <li class="no-mobile">
             <a href="mailto:{{$data->email}}" class="header--mail">
                 <span>{{$data->email}}</span>
@@ -250,6 +252,7 @@
         </div>
         <span>Menu</span>
     </button>
+   
     <nav class="menu">
         <div class="menu--wrapper">
             <div class="menu--mapa">

@@ -6954,8 +6954,8 @@ body {
     bottom: auto;
     left: 50%;
     transform: translateX(-50%);
-    height: 13.3rem;
-    width: 24.5rem;
+    height: 8.3rem;
+    width: 32.5rem;
     pointer-events: auto;
     transition: all 0.6s cubic-bezier(0.785, 0.135, 0.15, 0.86);
     transition-delay: 0s;
@@ -7462,6 +7462,7 @@ body.menu-leave .menu--list li:nth-child(9) a {
     justify-content: center;
     border-top: 1px solid var(--color);
     color: var(--color);
+    text-align: center;
 }
 
 @media only screen and (max-width: 767.98px) {
@@ -14475,6 +14476,7 @@ textarea:-webkit-autofill:hover {
   .for_allhome_txt p, .for_allhome_txt span{
     text-align: left;
     width: 100%;
+    font-weight: 700;
   }
   .for_allhome_txt p{
       margin-top: 10px;
@@ -14484,6 +14486,27 @@ textarea:-webkit-autofill:hover {
     line-height: normal !important;
     font-weight: 700 !important;
     text-align: left !important;
+  }
+  .login-btn{
+    pointer-events: auto;
+    position: absolute;
+    top: 30px;
+    right: 65px;
+    width: 80px;
+    height: 30px;
+    border: 2px solid #2b4937;
+    color: #2b4937;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .login-btn:hover{
+      background: #2b4937;
+      color: #fff;
+  }
+  a:hover{
+      text-decoration: none;
   }
   @media (max-width:767px){
     .tabs-navb{
@@ -14504,6 +14527,9 @@ textarea:-webkit-autofill:hover {
     }
     .hide_login p > a{
       display: block;
+    }
+    .login-btn{
+        right: 15px;
     }
   }
 @media (max-width:575px){
