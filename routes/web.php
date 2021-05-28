@@ -34,6 +34,8 @@ Route::namespace("Site")->group(function () {
     Route::get('case-studies-detail/{id}','SituationController@detail')->name('situationDetail');
     Route::get('gear','ShopController@index')->name('shop');
     Route::get('gear/{id}','ShopController@detail')->name('shopDetail');
+
+
     Route::get('contact-us','ContactUsController@index')->name('contactUs');
     Route::post('send-email','ContactUsController@postContactUs')->name('contactUsEmail');
 
@@ -62,6 +64,10 @@ Route::namespace("Site")->group(function () {
     Route::post('save-request','DashboardController@createRequest')->name('saveRequest');
 
     Route::get('file-section','DashboardController@fileSection')->name('fileSection');
+
+    Route::get('buy-item/{id}','ShopController@buyItem')->name('buyItem');
+    Route::any('payment-form','ShopController@paymentForm')->name('paymentForm');
+    Route::any('show-payment-form','ShopController@showPaymentForm')->name('showPaymentForm');
 
 });
 

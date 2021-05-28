@@ -52,19 +52,19 @@
                     @endif
                 </span>
                 @if(session()->get('language') == 'english')
-                    <span> &bull;
+                    <span>
                         <a href="{{route('terms')}}" rel="noopener">
-                            <span class="fw-bold">Terms and Condition</span>
+                            <span class="fw-bold">TERMS AND CONDITIONS</span>
                         </a>&bull;
                         <a href="{{route('privacy')}}" rel="noopener">
-                            <span class="fw-bold">Privacy Policy</span>
+                            <span class="fw-bold">PRIVACY POLICY</span>
                         </a>&bull;
                         <a href="{{route('disclaimer')}}" rel="noopener">
-                            <span class="fw-bold">Disclaimer</span>
+                            <span class="fw-bold">DISCLAIMER</span>
                         </a>
                     </span>
                 @elseif(session()->get('language') == 'french')
-                    <span> &bull;
+                    <span> 
                         <a href="{{route('terms')}}" rel="noopener">
                             <span class="fw-bold">Termes et conditions</span>
                         </a>&bull;
@@ -76,7 +76,7 @@
                         </a>
                     </span>
                 @elseif(session()->get('language') == 'russia')
-                    <span> &bull;
+                    <span>
                         <a href="{{route('terms')}}" rel="noopener">
                             <span class="fw-bold">Сроки и условия</span>
                         </a>&bull;
@@ -88,15 +88,15 @@
                         </a>
                     </span>
                 @else
-                    <span> &bull;
+                    <span>
                         <a href="{{route('terms')}}" rel="noopener">
-                            <span class="fw-bold">Terms and Condition</span>
+                            <span class="fw-bold">TERMS AND CONDITIONS</span>
                         </a>&bull;
                         <a href="{{route('privacy')}}" rel="noopener">
-                            <span class="fw-bold">Privacy Policy</span>
+                            <span class="fw-bold">PRIVACY POLICY</span>
                         </a>&bull;
                         <a href="{{route('disclaimer')}}" rel="noopener">
-                            <span class="fw-bold">Disclaimer</span>
+                            <span class="fw-bold">DISCLAIMER</span>
                         </a>
                     </span>
                 @endif

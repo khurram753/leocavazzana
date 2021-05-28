@@ -1,7 +1,7 @@
 @extends('layout.site-layout.index')
 
 @section('title')
-    Shop
+    Gear
 @endsection
 
 @section('content')
@@ -23,19 +23,19 @@
                                     <h1 data-aos class="fs-60">
                                         @if(session()->get('language') == 'english')
                                             <div class="wrapper-mask-reverse">
-                                                <span>Shop</span>
+                                                <span>Gear</span>
                                             </div>
                                         @elseif(session()->get('language') == 'russia')
                                             <div class="wrapper-mask-reverse">
-                                                <span>Магазин</span>
+                                                <span>Механизм</span>
                                             </div>
                                         @elseif(session()->get('language') == 'french')
                                             <div class="wrapper-mask-reverse">
-                                                <span>Boutique</span>
+                                                <span>Équipement</span>
                                             </div>
                                         @else
                                             <div class="wrapper-mask-reverse">
-                                                <span>Shop</span>
+                                                <span>Gear</span>
                                             </div>
                                         @endif
                                     </h1>
@@ -43,10 +43,10 @@
 
                                 </div>
 
-{{--                                <div class="container-search" data-aos="fadeIn" data-search-set>--}}
-{{--                                    <label for="">Search</label>--}}
-{{--                                    <input type="search" class="search">--}}
-{{--                                </div>--}}
+                                {{--                                <div class="container-search" data-aos="fadeIn" data-search-set>--}}
+                                {{--                                    <label for="">Search</label>--}}
+                                {{--                                    <input type="search" class="search">--}}
+                                {{--                                </div>--}}
                             </div>
 
                             <div class="col-lg-10 col-md-9 column-produtos">
@@ -56,16 +56,20 @@
 
                                         @foreach($products as $product)
                                             @if(session()->get('language') == 'english')
-                                                <li class="active" data-search="{{$product->name_english}}" data-filter="{{$product->name_english}}">
+                                                <li class="active" data-search="{{$product->name_english}}"
+                                                    data-filter="{{$product->name_english}}">
                                             @elseif(session()->get('language') == 'french')
-                                                <li class="active" data-search="{{$product->name_french}}" data-filter="{{$product->name_french}}">
+                                                <li class="active" data-search="{{$product->name_french}}"
+                                                    data-filter="{{$product->name_french}}">
                                             @elseif(session()->get('language') == 'russia')
-                                                <li class="active" data-search="{{$product->name_russia}}" data-filter="{{$product->name_russia}}">
+                                                <li class="active" data-search="{{$product->name_russia}}"
+                                                    data-filter="{{$product->name_russia}}">
                                             @else
-                                                <li class="active" data-search="{{$product->name_english}}" data-filter="{{$product->name_english}}">
+                                                <li class="active" data-search="{{$product->name_english}}"
+                                                    data-filter="{{$product->name_english}}">
                                                     @endif
 
-                                                    <a href="{{route('shopDetail',['id'=>$product->id])}}" data-fancybox
+                                                    <a href="{{route('buyItem',['id'=>$product->id])}}" data-fancybox
                                                        data-type="iframe">
                                                         <div class="container-img " data-aos="reveal-left">
                                                             <div class="imgs">

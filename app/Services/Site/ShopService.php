@@ -34,4 +34,18 @@ class ShopService
         }
 
     }
+
+    public function buyItem($id)
+    {
+        $data = Product::find($id);
+        $product = array();
+        if($data)
+        {
+            $product = ['name'=>$data->name_english,'price'=>$data->price];
+            return PaymentGatewayService::start($product);
+        }
+        else{
+            return redirect()->route('shop')->with('error','Record Not Found');
+        }
+    }
 }
