@@ -64,7 +64,7 @@
                         </a>
                     </span>
                 @elseif(session()->get('language') == 'french')
-                    <span> 
+                    <span>
                         <a href="{{route('terms')}}" rel="noopener">
                             <span class="fw-bold">Termes et conditions</span>
                         </a>&bull;

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
+use App\Services\Site\PaymentGatewayService;
 use App\Services\Site\ShopService;
 use App\Shop;
 use Illuminate\Http\Request;
@@ -24,8 +25,8 @@ class ShopController extends Controller
         return $shopService->buyItem($id);
     }
 
-    public function paymentForm(ShopService $shopService)
+    public function showPaymentForm(Request $request,PaymentGatewayService $gatewayService)
     {
-
+        return $gatewayService->paymentFormFile($request);
     }
 }

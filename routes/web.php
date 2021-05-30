@@ -69,6 +69,7 @@ Route::namespace("Site")->group(function () {
     Route::any('payment-form','ShopController@paymentForm')->name('paymentForm');
     Route::any('show-payment-form','ShopController@showPaymentForm')->name('showPaymentForm');
 
+
 });
 
 Route::namespace('Admin')->group(function () {
