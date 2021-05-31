@@ -7573,7 +7573,13 @@ body.menu-leave .menu--list li:nth-child(9) a {
 }
 
 #pg-home .section-1 .column-1 header h2 {
-    line-height: 1.2em;
+    font-size: 50px;
+    line-height: 1.0em;
+}
+
+#pg-home .section-1 .column-1 header h3{
+    font-size: 20px;
+
 }
 
 #pg-home .section-1 .column-1 header h2 .wrapper-mask-reverse {

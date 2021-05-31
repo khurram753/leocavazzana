@@ -18,7 +18,7 @@
 
                                 <h1 data-aos class="fs-60 split">Contact!
                                     <br>
-                                    <p style="font-size: 12px; line-height: 2; margin-top:10px;">
+                                    <p style="font-size: 20px; line-height: 2; margin-top:10px;">
                                         @if(session()->get('language') == 'english')
                                             To help us best serve your inquiry, we recommend that you first describe the
                                             issue you’re having before telling us what you want to achieve. You may also
@@ -48,35 +48,35 @@
                                 </h1>
 
 
-                                <ul class="redes-sociais" data-aos="fadeIn">
-                                    <li>
-                                        <a
-                                            href="https://www.instagram.com/leocavazzana/"
-                                            class="icon-instagram"
-                                            target="_blank"
-                                            rel="noopener"
-                                        ><span>Instagram</span></a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="https://www.facebook.com/leonardocavazzana"
-                                            class="icon-facebook"
-                                            target="_blank"
-                                            rel="noopener"
-                                        ><span>Facebook</span></a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="https://www.youtube.com/user/leocavacana/"
-                                            target="_blank"
-                                            rel="noopener"
-                                            class="icon-youtube"
-                                        ><span>YouTube</span></a
-                                        >
-                                    </li>
-                                </ul>
+{{--                                <ul class="redes-sociais" data-aos="fadeIn">--}}
+{{--                                    <li>--}}
+{{--                                        <a--}}
+{{--                                            href="https://www.instagram.com/leocavazzana/"--}}
+{{--                                            class="icon-instagram"--}}
+{{--                                            target="_blank"--}}
+{{--                                            rel="noopener"--}}
+{{--                                        ><span>Instagram</span></a--}}
+{{--                                        >--}}
+{{--                                    </li>--}}
+{{--                                    <li>--}}
+{{--                                        <a--}}
+{{--                                            href="https://www.facebook.com/leonardocavazzana"--}}
+{{--                                            class="icon-facebook"--}}
+{{--                                            target="_blank"--}}
+{{--                                            rel="noopener"--}}
+{{--                                        ><span>Facebook</span></a--}}
+{{--                                        >--}}
+{{--                                    </li>--}}
+{{--                                    <li>--}}
+{{--                                        <a--}}
+{{--                                            href="https://www.youtube.com/user/leocavacana/"--}}
+{{--                                            target="_blank"--}}
+{{--                                            rel="noopener"--}}
+{{--                                            class="icon-youtube"--}}
+{{--                                        ><span>YouTube</span></a--}}
+{{--                                        >--}}
+{{--                                    </li>--}}
+{{--                                </ul>--}}
                             </div>
 
                             <div class="col-lg-6 column-contato">
