@@ -6775,6 +6775,15 @@ body {
     --bg: var(--brown-1);
 }
 
+[data-pg="pg-home"] {
+    --bg: white;
+}
+
+[data-pg="pg-loja"],
+[data-pg="pg-contato"] {
+    --bg: white;
+}
+
 [data-pg="pg-servicos"],
 [data-pg="pg-viagens"] {
     --bg: var(--brown-2);
