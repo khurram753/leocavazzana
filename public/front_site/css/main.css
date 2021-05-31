@@ -7215,7 +7215,7 @@ nav.menu {
 
 nav.menu {
     left: 0;
-    z-index: 999;
+    z-index: 9999;
     overflow-x: hidden;
     overflow-y: auto;
     pointer-events: none;
@@ -7588,7 +7588,8 @@ body.menu-leave .menu--list li:nth-child(9) a {
 
 #pg-home .section-1 .column-1 header h3{
     font-size: 20px;
-
+    color: black;
+}
 }
 
 #pg-home .section-1 .column-1 header h2 .wrapper-mask-reverse {
