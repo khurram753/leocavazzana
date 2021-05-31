@@ -12,6 +12,7 @@ namespace App\Services\Admin;
 
 use App\Helpers\ImageUploadHelper;
 use App\Color;
+use App\Order;
 use App\PivotProductVariationSize;
 use App\Product;
 use App\ProductVariation;
@@ -286,6 +287,13 @@ class ProductService
         } else {
             return response()->json(['result' => 'error', 'message' => 'Record not Found']);
         }
+    }
+
+    public function orderList()
+    {
+        $data = Order::orderBy('id','desc')->get();
+
+        return view('admin.product.order_list',compact('data'));
     }
 
 }

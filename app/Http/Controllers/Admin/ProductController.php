@@ -86,49 +86,10 @@ class ProductController extends Controller
         return $productService->deleteVariation($id);
     }
 
-    public function listApi()
+
+
+    public function orderListing(ProductService $productService)
     {
-        $data = Product::all();
-
-        if(sizeof($data) > 0)
-        {
-            return response()->json(['result'=>'success','data'=>$data]);
-        }
-        else{
-            return response()->json(['result'=>'success','message'=>'No Record to display']);
-        }
-    }
-
-    public function saveProduct(Request $request)
-    {
-        $customMsgs = [
-            'name.required' => 'Name is a required field',
-            'description.required' => 'Description is a required field',
-            'short_description.required' => 'Short Description is a required field',
-        ];
-
-        $validator = Validator::make($request->all(),
-            [
-                'name' => 'required',
-                'description' => 'required',
-                'short_description' => 'required',
-            ],$customMsgs
-        );
-
-
-
-        if ($validator->fails()) {
-            return response()->json(['result'=>'error','message'=>$validator->messages()->first()]);
-        }
-
-        try {
-            Product::create(['name' => $request->name, 'description' => $request->description, 'short_description' => $request->short_description]);
-            return response()->json(['result'=>'success','message'=>'Record Saved']);
-        }
-        catch (\Exception $e)
-        {
-            return response()->json(['result'=>'error','message'=>'Error arrived:'.$e]);
-        }
-
+        return $productService->orderList();
     }
 }

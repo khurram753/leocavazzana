@@ -181,6 +181,8 @@ Route::namespace('Admin')->group(function () {
         Route::post('product-delete', 'ProductController@delete')->name('productDelete');
         Route::get('product-change-status', 'ProductController@changeStatus')->name('productStatus');
 
+        Route::get('order-listing','ProductController@orderListing')->name('orderListing');
+
         Route::get('change-cookie', 'CookiesController@index')->name('showCookie');
         Route::post('update-cookie', 'CookiesController@update')->name('cookieUpdate');
 

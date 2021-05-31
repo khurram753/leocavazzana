@@ -231,6 +231,19 @@
                     </ul>
                 </li>
 
+                <li class="submenu">
+                    <a
+
+                        @if(Request()->route()->getName() == 'orderListing' )
+                        class="active"
+                        @endif
+                        href="{{route('orderListing')}}">
+                        <i class="fab fa-product-hunt"></i><span> Order </span>
+                    </a>
+{{--                        <span class="menu-arrow"></span></a>--}}
+
+                </li>
+
 
                 <li class="submenu">
                     <a
