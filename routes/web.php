@@ -65,9 +65,7 @@ Route::namespace("Site")->group(function () {
 
     Route::get('file-section','DashboardController@fileSection')->name('fileSection');
 
-    Route::get('buy-item/{id}','ShopController@buyItem')->name('buyItem');
-    Route::any('payment-form','ShopController@paymentForm')->name('paymentForm');
-    Route::any('show-payment-form','ShopController@showPaymentForm')->name('showPaymentForm');
+    Route::post('create-stripe-session-for-products','ShopController@createSession')->name('createStripeSessionForProducts');
 
 
 });

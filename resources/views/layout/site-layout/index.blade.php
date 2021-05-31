@@ -7,6 +7,8 @@
 
     <title>@yield('title')</title>
 
+    @yield('tags')
+
 @include('layout.site-layout.css')
 
 <!-- BEGIN CSS for this page -->

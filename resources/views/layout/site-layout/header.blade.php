@@ -1,4 +1,5 @@
 <header id="header">
+    @guest
     @if(session()->get('language') == 'english')
         <a class="login-btn" href="{{route('userLogin')}}">Login</a>
     @elseif(session()->get('language') == 'russia')
@@ -7,6 +8,17 @@
         <a class="login-btn" href="{{route('userLogin')}}">Авторизоваться</a>
     @else
         <a class="login-btn" href="{{route('userLogin')}}">Login</a>
+    @endif
+    @else
+        @if(session()->get('language') == 'english')
+            <a class="login-btn" href="{{route('userLogout')}}">Logout</a>
+        @elseif(session()->get('language') == 'russia')
+            <a class="login-btn" href="{{route('userLogout')}}">Выйти</a>
+        @elseif(session()->get('language') == 'french')
+            <a class="login-btn" href="{{route('userLogout')}}">Se déconnecter</a>
+        @else
+            <a class="login-btn" href="{{route('userLogout')}}">Logout</a>
+        @endif
     @endif
     <a href="{{route('home')}}" class="logo"
        data-pjax aria-label="Cedrus">

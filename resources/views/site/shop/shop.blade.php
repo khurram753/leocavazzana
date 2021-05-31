@@ -4,6 +4,10 @@
     Gear
 @endsection
 
+@section('tags')
+    <meta name="csrf-token" content="{{ csrf_token() }}"/>
+@endsection
+
 @section('content')
     @include('layout.site-layout.header')
 
@@ -69,7 +73,7 @@
                                                     data-filter="{{$product->name_english}}">
                                                     @endif
 
-                                                    <a href="{{route('buyItem',['id'=>$product->id])}}" data-fancybox
+                                                    <a href="javascript:void(0)" data-fancybox class="buyCourseBtn"
                                                        data-type="iframe">
                                                         <div class="container-img " data-aos="reveal-left">
                                                             <div class="imgs">
@@ -83,21 +87,48 @@
 
                                                                 @if(session()->get('language') == 'english')
                                                                     <h2> {{$product->name_english}}</h2>
-                                                                    <strong>Buy</strong>
+                                                                    <button class="buyCourseBtn" type="button"
+                                                                            data-id="{{$product->id}}">
+                                                                        Buy
+                                                                    </button>
+                                                                    {{--                                                                    <strong>Buy</strong>--}}
 
                                                                 @elseif(session()->get('language') == 'french')
                                                                     <h2> {{$product->name_french}}</h2>
-                                                                    <strong>Acheter</strong>
+                                                                    {{--                                                                    <strong>Acheter</strong>--}}
+                                                                    <button class="buyCourseBtn" type="button"
+                                                                            data-id="{{$product->id}}">
+                                                                        Acheter
+                                                                    </button>
 
                                                                 @elseif(session()->get('language') == 'russia')
                                                                     <h2>{{$product->name_russia}}</h2>
-                                                                    <strong>Купить</strong>
+                                                                    {{--                                                                    <strong>Купить</strong>--}}
+                                                                    <button class="buyCourseBtn" type="button"
+                                                                            data-id="{{$product->id}}">
+                                                                        Acheter
+                                                                    </button>
 
                                                                 @else
                                                                     <h2> {{$product->name_english}}</h2>
-                                                                    <strong>Buy</strong>
+                                                                    {{--                                                                    <strong>Buy</strong>--}}
+
+                                                                    @auth
+                                                                        <a class="buyCourseBtn"
+                                                                           href="javascript:void(0)"
+                                                                           data-id="{{$product->id}}">
+                                                                            Buy
+                                                                        </a>
+                                                                    @else
+                                                                        <a class="buyCourseBtn"
+                                                                           href="{{route('userLogin')}}"
+                                                                           data-id="{{$product->id}}">
+                                                                            Buy
+                                                                        </a>
+                                                                    @endauth
 
                                                                 @endif
+
 
                                                             </div>
                                                             <div class="column-2">
@@ -137,3 +168,54 @@
     </div>
 
 @endsection
+
+
+@section('script')
+    @auth
+        <script src="https://js.stripe.com/v3/"></script>
+
+        <script>
+            $(document).ready(function () {
+                $('.buyCourseBtn').click(function (e) {
+                    e.preventDefault();
+                    var stripe = Stripe('{{env('STRIPE_KEY')}}');
+
+                    var data = $(this).data('id');
+
+                    showLoadingImage();
+
+
+                    $.ajax({
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                        method: 'POST',
+                        url: '{{route('createStripeSessionForProducts')}}',
+                        data: {product_id: data},
+                        success: function (response, status) {
+                            if (response.result == 'success') {
+                                hideLoadingImage();
+                                return stripe.redirectToCheckout({sessionId: response.data});
+
+                            } else if (response.result == 'error') {
+                                hideLoadingImage();
+                                errorMsg(response.message);
+                            }
+                        },
+                        error: function (data) {
+                            $.each(data.responseJSON.errors, function (key, value) {
+                                hideLoadingImage();
+                                errorMsg(value);
+                            });
+                        }
+
+                    });
+
+
+                });
+
+            });
+        </script>
+    @endauth
+@endsection
+

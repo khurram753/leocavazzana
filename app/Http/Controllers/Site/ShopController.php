@@ -10,9 +10,9 @@ use Illuminate\Http\Request;
 
 class ShopController extends Controller
 {
-    public function index(ShopService $shopService)
+    public function index(Request $request,ShopService $shopService)
     {
-        return $shopService->index();
+        return $shopService->index($request);
     }
 
     public function detail($id, ShopService $shopService)
@@ -20,13 +20,10 @@ class ShopController extends Controller
         return $shopService->detail($id);
     }
 
-    public function buyItem($id,ShopService $shopService)
+    public function createSession(Request $request,ShopService $shopService)
     {
-        return $shopService->buyItem($id);
+        return $shopService->createSession($request);
     }
 
-    public function showPaymentForm(Request $request,PaymentGatewayService $gatewayService)
-    {
-        return $gatewayService->paymentFormFile($request);
-    }
+
 }
