@@ -97,6 +97,8 @@ class ShopService
                 $name = $data->name_english;
             }
 
+//            dd(public_path($data->featured_image),asset($data->featured_image));
+
             $session = Session::create([
                 'billing_address_collection' => 'required',
                 'payment_method_types' => ['card'],
@@ -105,6 +107,8 @@ class ShopService
                         'currency' => 'usd',
                         'product_data' => [
                             'name' => $data->name_english,
+                            'images' => [asset($data->featured_image)],
+
                         ],
                         'unit_amount_decimal' => $data->price * 100,
                     ],
