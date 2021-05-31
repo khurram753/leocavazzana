@@ -97,7 +97,7 @@ class ShopService
                 $name = $data->name_english;
             }
 
-//            dd(public_path($data->featured_image),asset($data->featured_image));
+            dd(public_path($data->featured_image),asset($data->featured_image));
 
             $session = Session::create([
                 'billing_address_collection' => 'required',
