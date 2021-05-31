@@ -107,7 +107,7 @@ class ShopService
                         'currency' => 'usd',
                         'product_data' => [
                             'name' => $data->name_english,
-                            'images' => [asset($data->featured_image)],
+//                            'images' => [asset($data->featured_image)],
 
                         ],
                         'unit_amount_decimal' => $data->price * 100,
