@@ -82,19 +82,19 @@
                                                             <div class="column-1">
 
                                                                 @if(session()->get('language') == 'english')
-                                                                    <h2 style="font-weight: bold"> {{$product->name_english}}</h2>
+                                                                    <h2> {{$product->name_english}}</h2>
                                                                     <strong>Buy</strong>
 
                                                                 @elseif(session()->get('language') == 'french')
-                                                                    <h2 style="font-weight: bold"> {{$product->name_french}}</h2>
+                                                                    <h2> {{$product->name_french}}</h2>
                                                                     <strong>Acheter</strong>
 
                                                                 @elseif(session()->get('language') == 'russia')
-                                                                    <h2 style="font-weight: bold">{{$product->name_russia}}</h2>
+                                                                    <h2>{{$product->name_russia}}</h2>
                                                                     <strong>Купить</strong>
 
                                                                 @else
-                                                                    <h2 style="font-weight: bold"> {{$product->name_english}}</h2>
+                                                                    <h2> {{$product->name_english}}</h2>
                                                                     <strong>Buy</strong>
 
                                                                 @endif
