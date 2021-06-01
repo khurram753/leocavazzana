@@ -283,12 +283,12 @@
                         <style>
                             .cls-1 {
                                 fill: none;
-                                stroke: #2b4937;
+                                stroke: #000;
                                 stroke-miterlimit: 10;
                             }
 
                             .cls-2 {
-                                fill: #2b4937;
+                                fill: #000;
                             }
                         </style>
                     </defs>

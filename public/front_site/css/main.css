@@ -452,11 +452,11 @@ body {
 
 .green-1,
 body {
-    color: #2b4937;
+    color: #000;
 }
 
 .bg-green-1 {
-    background-color: #2b4937;
+    background-color: #000;
 }
 
 .brown-1 {
@@ -5988,7 +5988,7 @@ body {
 }
 
 .strong-hover {
-    --color: var(--green-1);
+    --color: #000;
     position: relative;
     font-weight: 700;
 }
@@ -6420,7 +6420,7 @@ body {
 
 .btn-arrow > span {
     position: relative;
-    color: var(--btn-color);
+    color: #000;
 }
 
 .btn-arrow > span:before {
@@ -7084,8 +7084,8 @@ body {
 }
 
 #bt-menu {
-    --color: var(--green-1);
-    --color-active: var(--green-1);
+    --color: #000;
+    --color-active: #000;
     position: absolute;
     top: 11rem;
     right: auto;
@@ -7154,7 +7154,7 @@ nav.menu {
 }
 
 .menu--wrapper .menu--list li a {
-    color: var(--color-active);
+    color: #000;
     position: relative;
     display: block;
     text-decoration: none;
@@ -7215,7 +7215,7 @@ nav.menu {
 
 nav.menu {
     left: 0;
-    z-index: 9999;
+    z-index: 999;
     overflow-x: hidden;
     overflow-y: auto;
     pointer-events: none;
@@ -7296,7 +7296,7 @@ nav.menu:before {
 
 .menu--wrapper .menu--list li a span:after,
 .menu--wrapper .menu--list li a span:before {
-    color: var(--green-1);
+    color: #000;
 }
 
 .menu--wrapper .menu--list li:before {
@@ -7891,7 +7891,7 @@ body.menu-leave .menu--list li:nth-child(9) a {
 }
 
 #pg-home .row-2 a {
-    color: var(--green-1);
+    color: #000;
 }
 
 @media only screen and (max-width: 767.98px) {
@@ -14251,7 +14251,7 @@ textarea:-webkit-autofill:hover {
     overflow: hidden;
     position: relative;
     z-index: 9;
-    color: #2b4937;
+    color: #000;
     text-decoration: none !important;
   }
   .tabs-nav li a::before{
@@ -14263,7 +14263,7 @@ textarea:-webkit-autofill:hover {
   .tabs-nav li a::after{
       top: auto;
       content: "";
-      background: #2b4937;
+      background: #000;
       right: 0;
       bottom: 0;
       left: 0;
@@ -14290,16 +14290,16 @@ textarea:-webkit-autofill:hover {
   .forget_text{
     display: block;
       font-size: 14px;
-      color: #2B4936;
+      color: #000;
       font-weight: 400;
   }
   .hide_login button{
     display: block;
     padding: 14px;
-    background-color: #2b4937;
+    background-color: #000;
     color: #fff;
     font-size: 14px;
-    border: 1px solid #2b4937;
+    border: 1px solid #000;
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -14313,17 +14313,17 @@ textarea:-webkit-autofill:hover {
   }
   .hide_login button:hover{
     background: #fff;
-    color: #2b4937;
+    color: #000;
   }
   .hide_login p{
     font-size: 14px;
   }
   .hide_login p > a{
-    color: #2b4937;
+    color: #000;
     font-weight: 400;
   }
   .tabs-nav li.tab-active a{
-    background: #2B4936;
+    background: #000;
     color: #fff;
   }
   .tabs-nav li.tab-active a::after{
@@ -14510,15 +14510,15 @@ textarea:-webkit-autofill:hover {
     right: 65px;
     width: 80px;
     height: 30px;
-    border: 2px solid #2b4937;
-    color: #2b4937;
+    border: 2px solid #000;
+    color: #000;
     text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .login-btn:hover{
-      background: #2b4937;
+      background: #000;
       color: #fff;
   }
   a:hover{
