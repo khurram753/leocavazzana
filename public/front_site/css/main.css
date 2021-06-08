@@ -7609,6 +7609,10 @@ body.menu-leave .menu--list li:nth-child(9) a {
     line-height: 1.0em;
 }
 
+#pg-home .section-1 .column-1 header h2 span{
+    color: rgba(158,70,50) !important;
+}
+
 #pg-home .section-1 .column-1 header h3{
     font-size: 20px;
     color: black;
