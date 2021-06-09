@@ -7615,7 +7615,8 @@ body.menu-leave .menu--list li:nth-child(9) a {
 
 #pg-home .section-1 .column-1 header h3{
     font-size: 20px;
-    color: blackc;
+    /*color: blackc;*/
+    color:  rgba(126,122,113);
 }
 
 #pg-home .section-1 .column-1 header h2 .wrapper-mask-reverse {
