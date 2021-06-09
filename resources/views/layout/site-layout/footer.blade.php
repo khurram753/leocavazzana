@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 flex-between assinaturas">
-                <span>
+                <span style="border-bottom: 1px solid white;padding-top: 10px">
 
                     @if(session()->get('language') == 'english')
                         The information presented throughout the website is for informational
@@ -52,7 +52,7 @@
                     @endif
                 </span>
                 @if(session()->get('language') == 'english')
-                    <span>
+                    <span style="padding-top: 10px">
                         <a href="{{route('terms')}}" rel="noopener">
                             <span class="fw-bold">TERMS AND CONDITIONS</span>
                         </a>&bull;
@@ -64,7 +64,7 @@
                         </a>
                     </span>
                 @elseif(session()->get('language') == 'french')
-                    <span>
+                    <span style="padding-top: 10px">
                         <a href="{{route('terms')}}" rel="noopener">
                             <span class="fw-bold">Termes et conditions</span>
                         </a>&bull;
@@ -76,7 +76,7 @@
                         </a>
                     </span>
                 @elseif(session()->get('language') == 'russia')
-                    <span>
+                    <span style="padding-top: 10px">
                         <a href="{{route('terms')}}" rel="noopener">
                             <span class="fw-bold">Сроки и условия</span>
                         </a>&bull;
@@ -90,7 +90,7 @@
 
                 @else
 
-                    <span>
+                    <span style="padding-top: 10px">
                         <a href="{{route('terms')}}" rel="noopener">
                             <span class="fw-bold">TERMS AND CONDITIONS</span>
                         </a>&bull;
