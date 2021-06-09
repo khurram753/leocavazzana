@@ -6428,7 +6428,8 @@ body {
     --arrow-color: rgba(158,70,50) !important;
 }
 #pg-home .assinaturas > span{
-    color: rgba(126,122,113) !important;
+    /*color: rgba(126,122,113) !important;*/
+    color:white !important;
 }
 #pg-home #footer .assinaturas{
     border-top: rgba(126,122,113) !important;;
