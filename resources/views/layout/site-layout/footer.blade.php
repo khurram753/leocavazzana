@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 flex-between assinaturas">
-                <span style="border-bottom: 1px solid white;padding-top: 10px">
+                <span style="border-bottom: 1px solid white;padding-bottm: 10px">
 
                     @if(session()->get('language') == 'english')
                         The information presented throughout the website is for informational
