@@ -87,7 +87,9 @@
                             <span class="fw-bold">Отказ от ответственности</span>
                         </a>
                     </span>
+
                 @else
+
                     <span>
                         <a href="{{route('terms')}}" rel="noopener">
                             <span class="fw-bold">TERMS AND CONDITIONS</span>
