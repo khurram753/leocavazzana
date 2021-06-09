@@ -70,3 +70,10 @@
     }
 </style>
 @endif
+
+@if(Request()->route()->getName() == 'home' || Request()->route()->getName() == 'contactUs')
+    <style>
+
+    </style>
+@endif
+
