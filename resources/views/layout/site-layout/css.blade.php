@@ -73,7 +73,32 @@
 
 @if(Request()->route()->getName() == 'home' || Request()->route()->getName() == 'contactUs')
     <style>
-
+      .main_logo{
+          display: none !important;
+      }
+      .hc_logo{
+          display: block !important;
+      }
+      body{
+         background: rgba(29,29,28);
+      }
+      #bt-menu{
+        --color:rgba(126,122,113) ;
+    --color-active:rgba(126,122,113) ;
+      }
+      .login-btn{
+        border: 2px solid rgba(126,122,113);
+        color: rgba(126,122,113);
+      }
+      .header--mail span{
+        color: rgba(126,122,113);
+      }
+      .lang li a, .lang li:nth-last-child(2):before{
+        color: rgba(126,122,113) !important;
+      }
+      .lang a, .lang li:last-child:before{
+        color: rgba(126,122,113);
+      }
     </style>
 @endif
 

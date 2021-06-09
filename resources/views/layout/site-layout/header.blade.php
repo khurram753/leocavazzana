@@ -234,8 +234,8 @@
         {{--            </g>--}}
         {{--        </svg>--}}
 
-        <img style="width: 100%;" src="{{asset('front_site/images/leo_logo.png')}}">
-        {{-- <img style="width: 100%;" src="{{asset('front_site/images/newlogi.jpg')}}"> --}}
+        <img class="main_logo" style="width: 100%;" src="{{asset('front_site/images/leo_logo.png')}}">
+        <img class="hc_logo" style="width: 100%; display:none" src="{{asset('front_site/images/newlogi.jpg')}}">
 
     </a>
 
